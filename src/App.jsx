@@ -250,17 +250,16 @@ const IPhoneMockup = () => (
             {/* Options */}
             <div className="space-y-1.5 mt-auto">
               {[
-                { label: 'Bonjour, comment tu t\'appelles ?', correct: true  },
-                { label: 'Bonsoir, comment tu vas ?',        correct: false },
-                { label: 'Merci beaucoup !',                 correct: false },
+                { label: 'Bonjour, comment tu t\'appelles ?', correct: true },
+                { label: 'Bonsoir, comment tu vas ?', correct: false },
+                { label: 'Merci beaucoup !', correct: false },
               ].map((opt, i) => (
                 <div
                   key={i}
-                  className={`text-[10px] font-bold py-2 px-2.5 rounded-xl border-2 ${
-                    opt.correct
+                  className={`text-[10px] font-bold py-2 px-2.5 rounded-xl border-2 ${opt.correct
                       ? 'bg-indigo-50 border-indigo-400 text-indigo-800'
                       : 'bg-white border-slate-200 text-slate-600'
-                  }`}
+                    }`}
                 >
                   {opt.label}
                 </div>
@@ -291,7 +290,7 @@ const IPhoneMockup = () => (
 // ═══════════════════════════════════════════════════════
 const FeatureCard = ({ icon, title, description, color }) => {
   const colorClasses = {
-    amber:  { bg: 'bg-amber-100',  text: 'text-amber-600'  },
+    amber: { bg: 'bg-amber-100', text: 'text-amber-600' },
     purple: { bg: 'bg-purple-100', text: 'text-purple-600' },
     indigo: { bg: 'bg-indigo-100', text: 'text-indigo-600' },
   }[color];
@@ -311,15 +310,15 @@ const FeatureCard = ({ icon, title, description, color }) => {
 //  COMPOSANT PRINCIPAL
 // ═══════════════════════════════════════════════════════
 const KreyolangLandingPage = () => {
-  const [language,     setLanguage]     = useState('FR');
+  const [language, setLanguage] = useState('FR');
   const [showComingSoon, setShowComingSoon] = useState(false);
-  const [legalType,    setLegalType]    = useState(null); // 'terms' | 'privacy' | null
+  const [legalType, setLegalType] = useState(null); // 'terms' | 'privacy' | null
 
   return (
     <>
       {/* ── Modales ── */}
       {showComingSoon && <ComingSoonModal onClose={() => setShowComingSoon(false)} />}
-      {legalType      && <LegalModal type={legalType} onClose={() => setLegalType(null)} />}
+      {legalType && <LegalModal type={legalType} onClose={() => setLegalType(null)} />}
 
       <div className="min-h-screen font-sans bg-slate-50 text-slate-800 flex flex-col">
 
@@ -508,7 +507,7 @@ const KreyolangLandingPage = () => {
           </div>
 
           <div className="border-t border-slate-800 pt-8 text-center text-sm">
-            <p>© 2026 Kreyolang.com. Tous droits réservés. Fait avec 💜 par le Capitaine et son Architecte.</p>
+            <p>© 2026 Kreyolang.com. Tous droits réservés.</p>
           </div>
         </footer>
 
