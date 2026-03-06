@@ -49,7 +49,7 @@ const LegalPage = ({ title, lastUpdated, children }) => (
         </Link>
         <span className="h-4 w-px bg-slate-200" />
         <div className="flex items-center gap-2">
-          <img src="/mascot.png" alt="Kreyolang" className="h-7 w-7 object-contain" />
+          <img src="/mascot.webp" alt="Kreyolang" className="h-7 w-7 object-contain" />
           <span className="font-extrabold text-slate-900 text-sm">Kreyolang</span>
         </div>
         <nav className="ml-auto hidden sm:flex gap-5 text-xs font-semibold text-slate-400">
