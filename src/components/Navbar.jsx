@@ -20,7 +20,7 @@ const Navbar = ({ onCTA }) => {
         {/* Logo */}
         <a href="#" className="flex items-center gap-2 group">
           <img
-            src="mascot.png"
+            src="mascot.webp"
             alt="Mascotte Kreyolang"
             className="h-20 w-20 md:h-24 md:w-24 object-contain transition-transform duration-300 group-hover:scale-110"
           />
