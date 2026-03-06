@@ -10,7 +10,7 @@ const Footer = () => (
           <Anchor className="h-6 w-6 text-amber-400" />
           <span className="text-xl font-extrabold text-white">Kreyolang.com</span>
         </div>
-        <p className="text-sm leading-relaxed">Apprenez le créole.<br />Devenez un Amiral.</p>
+        <p className="text-sm leading-relaxed">Apprenez le créole et les langues d'Afrique.<br />Devenez un Amiral.</p>
       </div>
 
       <div>

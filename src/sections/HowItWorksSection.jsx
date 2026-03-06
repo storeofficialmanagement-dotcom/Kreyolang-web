@@ -12,8 +12,8 @@ const steps = [
   },
   {
     icon: <Globe className="h-7 w-7" />,
-    title: 'Choisissez votre créole',
-    desc: 'Haïtien, Guadeloupéen, Martiniquais ou Réunionnais.',
+    title: 'Choisissez votre langue',
+    desc: 'Créoles des Antilles, de l\'océan Indien et langues d\'Afrique.',
     color: 'bg-purple-100 text-purple-600',
     ring: 'ring-purple-200',
   },
@@ -41,7 +41,7 @@ const HowItWorksSection = () => {
       <div ref={ref} className="container mx-auto px-4">
         <div className="text-center mb-14">
           <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900">Comment ça marche ?</h2>
-          <p className="text-slate-500 mt-3 max-w-xl mx-auto">En 4 étapes simples, devenez bilingue créole.</p>
+          <p className="text-slate-500 mt-3 max-w-xl mx-auto">En 4 étapes simples, maîtrisez une nouvelle langue.</p>
         </div>
 
         <div className="grid md:grid-cols-4 gap-8">

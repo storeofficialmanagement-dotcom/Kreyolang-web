@@ -16,7 +16,7 @@ const HeroSection = ({ onCTA }) => {
         </div>
 
         <h2 className="text-4xl md:text-6xl font-extrabold leading-tight text-slate-900">
-          Apprenez le Créole en vous{' '}
+          Apprenez le Créole et les langues d'Afrique en vous{' '}
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600">
             amusant
           </span>.
@@ -24,7 +24,7 @@ const HeroSection = ({ onCTA }) => {
 
         {/* Emotional subtitle */}
         <p className="text-lg md:text-xl text-slate-500 max-w-lg mx-auto md:mx-0 leading-relaxed">
-          Vos grands-parents parlent créole. Vos enfants ne le comprennent plus.{' '}
+          Vos grands-parents parlent créole ou wolof. Vos enfants ne le comprennent plus.{' '}
           <strong className="text-slate-700">Changez ça en 5 minutes par jour.</strong>
         </p>
 

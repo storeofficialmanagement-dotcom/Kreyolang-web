@@ -4,12 +4,12 @@ const faqData = [
     answer: "Oui ! Le compte gratuit donne accès aux premières leçons de chaque unité, au système de progression (XP, ligues, streaks) et à un nombre limité de sessions par jour. L'abonnement Premium débloque l'intégralité du contenu.",
   },
   {
-    question: "Quels créoles puis-je apprendre ?",
-    answer: "Kreyolang propose 5 langues créoles : martiniquais, haïtien, guadeloupéen, guyanais et réunionnais. Trois langues africaines (wolof, bambara et peul) sont également en cours de développement.",
+    question: "Quelles langues puis-je apprendre ?",
+    answer: "Kreyolang propose des langues créoles (martiniquais, haïtien, guadeloupéen, guyanais, réunionnais) et des langues africaines (wolof, bambara, peul). De nouvelles langues sont régulièrement ajoutées.",
   },
   {
     question: "Les cours sont-ils conçus par des locuteurs natifs ?",
-    answer: "Absolument. Tous nos contenus pédagogiques sont créés et validés par des linguistes et locuteurs natifs de chaque créole. Les enregistrements audio sont réalisés par des voix authentiques.",
+    answer: "Absolument. Tous nos contenus pédagogiques sont créés et validés par des linguistes et locuteurs natifs de chaque langue. Les enregistrements audio sont réalisés par des voix authentiques.",
   },
   {
     question: "Combien de temps faut-il pour progresser ?",
@@ -28,8 +28,8 @@ const faqData = [
     answer: "La section Culture vous plonge dans l'univers créole au-delà de la langue : proverbes traditionnels (gratuit), histoire des Antilles, genres musicaux (du Bèlè au Zouk), recettes authentiques (Colombo, Accras, Ti-Punch) et légendes créoles (Manman Dlo, Konpè Lapen). Un contenu Premium unique.",
   },
   {
-    question: "Quelles langues africaines sont disponibles ?",
-    answer: "Nous préparons le wolof (Sénégal), le bambara (Mali) et le peul (Guinée). Ces langues partagent des liens historiques profonds avec les créoles. Inscrivez-vous à la newsletter pour être notifié du lancement.",
+    question: "Y aura-t-il d'autres langues à l'avenir ?",
+    answer: "Oui ! Kreyolang a pour ambition de couvrir un large éventail de langues créoles et africaines. Nous ajoutons régulièrement de nouvelles langues. Inscrivez-vous à la newsletter pour être notifié des prochains lancements.",
   },
   {
     question: "Comment fonctionnent les rangs pirates ?",

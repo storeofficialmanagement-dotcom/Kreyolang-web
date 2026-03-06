@@ -13,8 +13,8 @@ const FinalCTASection = ({ onCTA }) => {
           Prêt à embarquer ?
         </h2>
         <p className="text-lg md:text-xl opacity-90 max-w-2xl mx-auto mb-10 leading-relaxed">
-          Rejoignez des milliers d'apprenants et redécouvrez la langue de vos ancêtres.
-          L'aventure commence maintenant.
+          Rejoignez des milliers d'apprenants et redécouvrez les langues de vos ancêtres.
+          Créoles et langues d'Afrique — l'aventure commence maintenant.
         </p>
 
         <div className="flex flex-col sm:flex-row justify-center gap-4">

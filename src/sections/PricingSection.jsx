@@ -46,7 +46,7 @@ const PricingSection = ({ onCTA }) => {
           {/* Free plan */}
           <div className="rounded-3xl border-2 border-b-[6px] border-slate-200 p-8 bg-white">
             <h3 className="text-2xl font-extrabold text-slate-900 mb-2">Gratuit</h3>
-            <p className="text-slate-500 text-sm mb-6">Pour découvrir le créole</p>
+            <p className="text-slate-500 text-sm mb-6">Pour découvrir les langues</p>
             <p className="text-4xl font-extrabold text-slate-900 mb-6">
               0€ <span className="text-base font-bold text-slate-400">/ toujours</span>
             </p>
@@ -119,7 +119,7 @@ const PricingSection = ({ onCTA }) => {
             <ul className="space-y-3 mb-8">
               {[
                 'Accès illimité à toutes les leçons',
-                'Toutes les langues créoles',
+                'Toutes les langues disponibles',
                 'Mode hors-ligne',
                 'Expérience sans publicité',
                 'Audio haute qualité',

@@ -25,7 +25,7 @@ const features = [
   {
     icon: <Mic className="h-10 w-10" />,
     title: 'Prononciation Authentique',
-    description: 'Audio enregistré par des locuteurs natifs. Entraînez votre oreille avec la vraie musicalité du créole.',
+    description: 'Audio enregistré par des locuteurs natifs. Entraînez votre oreille avec la vraie musicalité de chaque langue.',
     color: 'rose',
   },
   {
@@ -43,13 +43,13 @@ const features = [
   {
     icon: <BookOpen className="h-10 w-10" />,
     title: 'Culture Immersive',
-    description: 'Proverbes, histoire, musique, cuisine et légendes : plongez au cœur de la culture créole.',
+    description: 'Proverbes, histoire, musique, cuisine et légendes : plongez au cœur des cultures créoles et africaines.',
     color: 'amber',
   },
   {
     icon: <Wrench className="h-10 w-10" />,
     title: 'Outils Complets',
-    description: 'Dictionnaire créole, conjugaison des verbes et guide phonétique pour aller encore plus loin.',
+    description: 'Dictionnaire multilingue, conjugaison des verbes et guide phonétique pour aller encore plus loin.',
     color: 'indigo',
   },
 ];
@@ -65,7 +65,7 @@ const FeaturesSection = () => {
             Pourquoi choisir la méthode Pirate ?
           </h2>
           <p className="text-slate-500 mt-3 max-w-xl mx-auto">
-            8 raisons qui font de Kreyolang l'app n°1 pour apprendre le créole.
+            8 raisons qui font de Kreyolang l'app n°1 pour apprendre le créole et les langues d'Afrique.
           </p>
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">

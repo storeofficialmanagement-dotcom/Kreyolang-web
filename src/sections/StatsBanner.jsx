@@ -3,9 +3,9 @@ import useScrollAnimation from '../hooks/useScrollAnimation';
 
 const stats = [
   { value: '5 000+',  label: 'Apprenants' },
-  { value: '8',       label: 'Langues' },
+  { value: '8+',      label: 'Langues' },
   { value: '500+',    label: 'Leçons' },
-  { value: '17',      label: 'Types d\'exercices' },
+  { value: '17+',     label: 'Types d\'exercices' },
   { value: '4.8/5',   label: 'Note moyenne' },
 ];
 
