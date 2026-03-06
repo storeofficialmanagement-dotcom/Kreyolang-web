@@ -1,0 +1,68 @@
+import React from 'react';
+import { pirateRanks } from '../data/cultureData';
+import useScrollAnimation from '../hooks/useScrollAnimation';
+
+const PirateRanksSection = () => {
+  const ref = useScrollAnimation();
+
+  return (
+    <section id="rangs" className="py-20 bg-gradient-to-b from-slate-900 to-slate-800 text-white overflow-hidden">
+      <div ref={ref} className="container mx-auto px-4">
+        <div className="text-center mb-14">
+          <h2 className="text-3xl md:text-4xl font-extrabold">
+            De Moussaillon à Amiral
+          </h2>
+          <p className="text-slate-400 mt-3 max-w-xl mx-auto">
+            Gravissez les 8 rangs pirates au fil de votre apprentissage. Chaque rang débloque un nouveau navire.
+          </p>
+        </div>
+
+        <div className="max-w-3xl mx-auto relative">
+          {/* Vertical line */}
+          <div className="absolute left-6 md:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-slate-600 via-purple-500 to-amber-400" />
+
+          {pirateRanks.map((rank, i) => (
+            <div
+              key={i}
+              className={`relative flex items-center gap-4 mb-6 ${
+                i % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
+              }`}
+            >
+              {/* Connector dot */}
+              <div className="absolute left-6 md:left-1/2 w-3 h-3 -translate-x-1/2 bg-purple-500 rounded-full ring-4 ring-slate-800 z-10" />
+
+              {/* Spacer for alternating layout */}
+              <div className="hidden md:block md:w-1/2" />
+
+              {/* Card */}
+              <div className={`ml-12 md:ml-0 md:w-1/2 ${i % 2 === 0 ? 'md:pl-8' : 'md:pr-8'}`}>
+                <div className={`bg-slate-800/80 backdrop-blur-sm border border-slate-700 rounded-2xl p-5 hover:border-purple-500/50 transition-all duration-300 ${
+                  i === pirateRanks.length - 1 ? 'ring-2 ring-amber-400/50 bg-gradient-to-br from-slate-800 to-amber-950/30' : ''
+                }`}>
+                  <div className="flex items-center gap-3 mb-2">
+                    <span className="text-2xl">{rank.emoji}</span>
+                    <div>
+                      <div className="flex items-center gap-2">
+                        <span className="text-xs text-slate-500 font-bold">Rang {rank.rank}</span>
+                        {i === pirateRanks.length - 1 && (
+                          <span className="text-[10px] bg-amber-500/20 text-amber-400 px-2 py-0.5 rounded-full font-extrabold">
+                            Rang ultime
+                          </span>
+                        )}
+                      </div>
+                      <h3 className="text-base font-extrabold text-white">{rank.title}</h3>
+                    </div>
+                  </div>
+                  <p className="text-xs text-slate-400 mb-1">{rank.boat}</p>
+                  <p className="text-sm text-slate-300 leading-relaxed">{rank.desc}</p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default PirateRanksSection;
