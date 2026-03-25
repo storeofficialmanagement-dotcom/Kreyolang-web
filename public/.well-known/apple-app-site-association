@@ -1,10 +1,12 @@
 {
   "applinks": {
-    "apps": [],
     "details": [
       {
-        "appID": "UHQC3B44MG.com.kreyolangapp.Kreyolang",
-        "paths": ["/auth/*", "/auth/callback"]
+        "appIDs": ["UHQC3B44MG.com.kreyolangapp.Kreyolang"],
+        "components": [
+          { "/": "/auth", "comment": "Supabase email confirmation redirect" },
+          { "/": "/auth/*", "comment": "Supabase auth sub-paths" }
+        ]
       }
     ]
   }
