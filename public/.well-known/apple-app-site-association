@@ -1,0 +1,11 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "UHQC3B44MG.com.kreyolangapp.Kreyolang",
+        "paths": ["/auth/*", "/auth/callback"]
+      }
+    ]
+  }
+}
