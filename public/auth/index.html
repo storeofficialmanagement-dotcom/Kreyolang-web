@@ -3,66 +3,99 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kreyolang - Verification</title>
+  <title>Kreyolang</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { min-height: 100vh; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #8E2DE2, #4A00E0); font-family: -apple-system, BlinkMacSystemFont, sans-serif; color: #fff; }
-    .card { background: rgba(255,255,255,0.12); backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.2); border-radius: 24px; padding: 48px 36px; max-width: 380px; width: 90%; text-align: center; }
-    .check { font-size: 56px; margin-bottom: 16px; display: block; }
-    h1 { font-size: 24px; font-weight: 700; margin-bottom: 12px; }
-    p { font-size: 15px; opacity: 0.85; line-height: 1.6; margin-bottom: 32px; }
-    .btn { display: inline-block; background: #fff; color: #4A00E0; font-weight: 700; font-size: 16px; padding: 16px 32px; border-radius: 14px; text-decoration: none; width: 100%; cursor: pointer; border: none; }
-    .hint { margin-top: 20px; font-size: 13px; opacity: 0.6; margin-bottom: 0; }
-    .spinner { width: 32px; height: 32px; border: 3px solid rgba(255,255,255,0.3); border-top-color: #fff; border-radius: 50%; animation: spin 0.8s linear infinite; margin: 0 auto 20px; }
-    @keyframes spin { to { transform: rotate(360deg); } }
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #8E2DE2, #4A00E0);
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      padding: 24px;
+    }
+    .card {
+      background: #fff;
+      border-radius: 24px;
+      padding: 40px 32px;
+      text-align: center;
+      max-width: 360px;
+      width: 100%;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.25);
+    }
+    .icon { font-size: 52px; margin-bottom: 16px; }
+    h1 { font-size: 22px; font-weight: 800; color: #1a1a2e; margin-bottom: 10px; }
+    .sub { font-size: 15px; color: #666; line-height: 1.6; margin-bottom: 28px; }
+    .btn {
+      display: block; width: 100%;
+      padding: 16px;
+      background: linear-gradient(135deg, #8E2DE2, #4A00E0);
+      color: #fff; font-size: 17px; font-weight: 700;
+      border: none; border-radius: 14px; cursor: pointer;
+      text-decoration: none; letter-spacing: 0.3px;
+    }
+    .hint { margin-top: 14px; font-size: 13px; color: #999; line-height: 1.5; }
+    .hint strong { color: #555; }
+    .err { display: none; margin-top: 14px; font-size: 13px; color: #e53e3e; }
   </style>
 </head>
 <body>
   <div class="card">
-    <div class="spinner" id="spinner"></div>
-    <span class="check" id="checkIcon" style="display:none">&#10003;</span>
-    <h1 id="title">Redirection en cours...</h1>
-    <p id="subtitle">Ouverture de Kreyolang, veuillez patienter.</p>
-    <a class="btn" id="openBtn" style="display:none" href="#">Ouvrir Kreyolang</a>
-    <p class="hint" id="hint" style="display:none">Si l'application ne s'ouvre pas, appuyez sur le bouton ci-dessus.</p>
+    <div class="icon" id="icon">&#10003;&#65039;</div>
+    <h1 id="title">Email confirm&#233; !</h1>
+    <p class="sub" id="sub">Appuyez sur le bouton pour continuer dans Kreyolang.</p>
+    <a id="btn" class="btn" href="#">Ouvrir Kreyolang &rarr;</a>
+    <p class="hint" id="hint">
+      iOS va vous demander de confirmer &mdash;<br/>
+      appuyez simplement sur <strong>&laquo;&nbsp;Autoriser&nbsp;&raquo;</strong>.
+    </p>
+    <p class="err" id="err">Kreyolang ne semble pas install&#233; sur cet appareil.</p>
   </div>
   <script>
     (function () {
-      var hash = window.location.hash;
-      var search = window.location.search;
-      var openBtn = document.getElementById('openBtn');
-      var spinner = document.getElementById('spinner');
-      var checkIcon = document.getElementById('checkIcon');
-      var title = document.getElementById('title');
-      var subtitle = document.getElementById('subtitle');
-      var hint = document.getElementById('hint');
-      function showSuccess(deepLink) {
-        spinner.style.display = 'none';
-        checkIcon.style.display = 'block';
-        title.textContent = 'Compte verifie !';
-        subtitle.textContent = 'Ouverture de Kreyolang...';
-        openBtn.href = deepLink;
-        openBtn.style.display = 'block';
-        hint.style.display = 'block';
-      }
-      function showError() {
-        spinner.style.display = 'none';
-        title.textContent = 'Lien expire';
-        subtitle.textContent = 'Ce lien est invalide. Reconnecte-toi dans l application.';
-      }
-      if (hash && hash.includes('access_token')) {
-        var dl = 'kreyolang://' + hash;
-        showSuccess(dl);
-        setTimeout(function () { window.location.href = dl; }, 800);
+      var hash   = window.location.hash.slice(1);
+      var search = window.location.search.slice(1);
+      var hp = new URLSearchParams(hash);
+      var qp = new URLSearchParams(search);
+
+      var error = hp.get('error') || qp.get('error');
+      if (error) {
+        document.getElementById('icon').textContent = '\u26a0\ufe0f';
+        document.getElementById('title').textContent = 'Lien expir\u00e9';
+        document.getElementById('sub').textContent = 'Ce lien n\'est plus valide. Demandez un nouveau lien depuis l\'app.';
+        document.getElementById('btn').style.display = 'none';
+        document.getElementById('hint').style.display = 'none';
         return;
       }
-      if (search && search.includes('code=')) {
-        var dl2 = 'kreyolang://auth/callback' + search;
-        showSuccess(dl2);
-        setTimeout(function () { window.location.href = dl2; }, 800);
+
+      var code         = qp.get('code');
+      var accessToken  = hp.get('access_token') || qp.get('access_token');
+      var refreshToken = hp.get('refresh_token') || qp.get('refresh_token');
+
+      var deepLink;
+      if (code) {
+        deepLink = 'kreyolang://auth/callback?code=' + encodeURIComponent(code);
+      } else if (accessToken && refreshToken) {
+        deepLink = 'kreyolang://#' + hash;
+      } else {
+        document.getElementById('icon').textContent = '\u26a0\ufe0f';
+        document.getElementById('title').textContent = 'Lien invalide';
+        document.getElementById('sub').textContent = 'Ce lien ne contient pas de donn\u00e9es valides.';
+        document.getElementById('btn').style.display = 'none';
+        document.getElementById('hint').style.display = 'none';
         return;
       }
-      showError();
+
+      var btn = document.getElementById('btn');
+      btn.href = deepLink;
+      btn.addEventListener('click', function (e) {
+        e.preventDefault();
+        window.location.href = deepLink;
+        setTimeout(function () {
+          document.getElementById('err').style.display = 'block';
+        }, 3000);
+      });
     })();
   </script>
 </body>
