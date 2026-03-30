@@ -67,7 +67,7 @@ const LanguagesSection = () => {
           <span className="w-2 h-2 bg-purple-500 rounded-full" />
           {t.creoles}
         </h3>
-        <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-4 mb-3">
+        <div className="grid grid-cols-2 lg:grid-cols-5 gap-4 mb-3">
           {creoles.map((l, i) => (
             <div key={i} className={`rounded-2xl border-2 border-b-[5px] p-5 ${l.color} hover:-translate-y-1 transition-all duration-300`}>
               <span className="text-3xl block mb-2">{l.flag}</span>
@@ -92,7 +92,7 @@ const LanguagesSection = () => {
           {t.african}
           <span className="text-xs bg-amber-100 text-amber-700 font-extrabold px-2.5 py-1 rounded-full">{t.comingSoon}</span>
         </h3>
-        <div className="grid md:grid-cols-3 gap-4 mb-3">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-3">
           {african.map((l, i) => (
             <div key={i} className={`rounded-2xl border-2 border-b-[5px] p-5 ${l.color} hover:-translate-y-1 transition-all duration-300`}>
               <span className="text-3xl block mb-2">{l.flag}</span>
