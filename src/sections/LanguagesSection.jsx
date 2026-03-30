@@ -67,7 +67,7 @@ const LangCard = ({ l }) => (
   </div>
 );
 
-const SwipeCarousel = ({ items, hint }) => {
+const SwipeCarousel = ({ items, hint, accent = 'violet' }) => {
   const [swiped, setSwiped] = React.useState(false);
   const [progress, setProgress] = React.useState(0);
   const scrollRef = React.useRef(null);
@@ -105,7 +105,7 @@ const SwipeCarousel = ({ items, hint }) => {
       {/* Barre de progression */}
       <div className="mt-3 h-1 rounded-full bg-slate-200 overflow-hidden">
         <div
-          className="h-full rounded-full bg-violet-400 transition-all duration-150"
+          className={`h-full rounded-full transition-all duration-150 ${accent === 'amber' ? 'bg-amber-400' : 'bg-violet-400'}`}
           style={{ width: `${Math.max(progress * 100, 18)}%` }}
         />
       </div>
@@ -157,7 +157,7 @@ const LanguagesSection = () => {
               <span className="w-2 h-2 bg-amber-500 rounded-full" />{t.african}
               <span className="text-[10px] bg-amber-100 text-amber-700 font-extrabold px-2 py-0.5 rounded-full">{t.comingSoon}</span>
             </h3>
-            <SwipeCarousel items={african} hint={t.hint} />
+            <SwipeCarousel items={african} hint={t.hint} accent="amber" />
             <p className="text-xs text-amber-500 font-bold mt-4 flex items-center gap-1.5">
               <Sparkles className="h-3 w-3" />{t.moreAfrican}
             </p>
