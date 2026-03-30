@@ -1,5 +1,5 @@
-import React, { useState, useRef } from 'react';
-import { Sparkles, ChevronLeft, ChevronRight } from 'lucide-react';
+import React from 'react';
+import { Sparkles } from 'lucide-react';
 import useScrollAnimation from '../hooks/useScrollAnimation';
 import { useLanguage } from '../context/LanguageContext';
 import SectionTag from '../components/SectionTag';
@@ -52,7 +52,7 @@ const txtEN = {
 };
 
 const LangCard = ({ l }) => (
-  <div className={`rounded-2xl border-2 p-5 ${l.color} flex-shrink-0 w-[200px] hover:-translate-y-1 transition-all duration-300`}>
+  <div className={`rounded-2xl border-2 p-5 ${l.color} snap-center shrink-0 w-[200px] hover:-translate-y-1 transition-all duration-300`}>
     <span className="text-3xl block mb-2">{l.flag}</span>
     <h4 className="text-sm font-extrabold text-slate-900 mb-2">{l.name}</h4>
     <div className="bg-white/70 rounded-lg p-2 mb-2">
@@ -65,56 +65,11 @@ const LangCard = ({ l }) => (
   </div>
 );
 
-const Carousel = ({ items, accentColor = 'violet' }) => {
-  const [index, setIndex] = useState(0);
-  const total = items.length;
-
-  const prev = () => setIndex(i => (i - 1 + total) % total);
-  const next = () => setIndex(i => (i + 1) % total);
-
-  const btnBase = `flex items-center justify-center w-9 h-9 rounded-full border-2 transition-all duration-150`;
-  const btnActive = accentColor === 'violet'
-    ? 'border-violet-200 text-violet-500 hover:bg-violet-50'
-    : 'border-amber-200 text-amber-500 hover:bg-amber-50';
-  const dotActive = accentColor === 'violet' ? 'bg-violet-500' : 'bg-amber-500';
-
-  return (
-    <div className="relative">
-      {/* Cards strip — 1 card centered on mobile, peek neighbors */}
-      <div className="overflow-hidden">
-        <div
-          className="flex gap-4 transition-transform duration-400 ease-in-out"
-          style={{ transform: `translateX(calc(-${index * 216}px))` }}
-        >
-          {items.map((l, i) => <LangCard key={i} l={l} />)}
-        </div>
-      </div>
-
-      {/* Controls */}
-      <div className="flex items-center justify-between mt-5">
-        {/* Dots */}
-        <div className="flex gap-2">
-          {items.map((_, i) => (
-            <button
-              key={i}
-              onClick={() => setIndex(i)}
-              className={`rounded-full transition-all duration-200 ${i === index ? `${dotActive} w-5 h-2` : 'bg-slate-200 w-2 h-2'}`}
-            />
-          ))}
-        </div>
-        {/* Arrows */}
-        <div className="flex gap-2">
-          <button onClick={prev} className={`${btnBase} ${btnActive}`}>
-            <ChevronLeft className="h-4 w-4" />
-          </button>
-          <button onClick={next} className={`${btnBase} ${btnActive}`}>
-            <ChevronRight className="h-4 w-4" />
-          </button>
-        </div>
-      </div>
-    </div>
-  );
-};
+const SwipeCarousel = ({ items }) => (
+  <div className="flex gap-4 overflow-x-auto snap-x snap-mandatory pb-3 -mx-4 px-4 scrollbar-hide">
+    {items.map((l, i) => <LangCard key={i} l={l} />)}
+  </div>
+);
 
 const LanguagesSection = () => {
   const ref = useScrollAnimation();
@@ -124,7 +79,7 @@ const LanguagesSection = () => {
   const t = lang === 'EN' ? txtEN : txtFR;
 
   return (
-    <section id="langues" className="py-20 bg-slate-50">
+    <section id="langues" className="py-20 bg-slate-50 overflow-hidden">
       <div ref={ref} className="container mx-auto px-4">
         <div className="text-center mb-14">
           <SectionTag label={t.tag} />
@@ -138,7 +93,7 @@ const LanguagesSection = () => {
             <h3 className="text-sm font-extrabold text-slate-700 mb-5 flex items-center gap-2">
               <span className="w-2 h-2 bg-violet-500 rounded-full" />{t.creoles}
             </h3>
-            <Carousel items={creoles} accentColor="violet" />
+            <SwipeCarousel items={creoles} />
             <p className="text-xs text-violet-500 font-bold mt-4 flex items-center gap-1.5">
               <Sparkles className="h-3 w-3" />{t.moreCreoles}
             </p>
@@ -150,7 +105,7 @@ const LanguagesSection = () => {
               <span className="w-2 h-2 bg-amber-500 rounded-full" />{t.african}
               <span className="text-[10px] bg-amber-100 text-amber-700 font-extrabold px-2 py-0.5 rounded-full">{t.comingSoon}</span>
             </h3>
-            <Carousel items={african} accentColor="amber" />
+            <SwipeCarousel items={african} />
             <p className="text-xs text-amber-500 font-bold mt-4 flex items-center gap-1.5">
               <Sparkles className="h-3 w-3" />{t.moreAfrican}
             </p>
