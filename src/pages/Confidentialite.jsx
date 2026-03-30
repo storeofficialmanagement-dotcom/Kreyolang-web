@@ -39,8 +39,9 @@ const Confidentialite = () => (
 
     {/* Préambule */}
     <Callout color="indigo">
-      Cette politique décrit comment <strong>Kreyolang SAS</strong> collecte, utilise et protège
-      vos données personnelles, conformément au{' '}
+      Cette politique décrit comment <strong>CMJ Group</strong> (opérant sous la marque{' '}
+      <strong>Kreyolang</strong>) collecte, utilise et protège vos données personnelles,
+      conformément au{' '}
       <strong>Règlement Général sur la Protection des Données (RGPD — UE 2016/679)</strong>, aux
       directives de l'<strong>Apple App Store Review Guidelines (§ 5.1)</strong> et du{' '}
       <strong>Google Play Developer Policy</strong>.
@@ -50,7 +51,10 @@ const Confidentialite = () => (
     <Article title="Article 1 — Responsable du traitement">
       <div className="bg-white border border-slate-200 rounded-2xl p-5 space-y-1.5 text-sm">
         <p>
-          <strong className="text-slate-800">Entité :</strong> Kreyolang SAS
+          <strong className="text-slate-800">Entité :</strong> CMJ Group (micro-entreprise), opérant sous la marque verbale <strong>Kreyolang</strong>
+        </p>
+        <p>
+          <strong className="text-slate-800">Adresse :</strong> 47, rue Vivienne – 75002 Paris
         </p>
         <p>
           <strong className="text-slate-800">Site web :</strong>{' '}
@@ -59,9 +63,9 @@ const Confidentialite = () => (
           </a>
         </p>
         <p>
-          <strong className="text-slate-800">Contact DPO :</strong>{' '}
-          <a href="mailto:privacy@kreyolang.com" className="text-purple-600 hover:underline">
-            privacy@kreyolang.com
+          <strong className="text-slate-800">Contact :</strong>{' '}
+          <a href="mailto:contact@kreyolang.com" className="text-purple-600 hover:underline">
+            contact@kreyolang.com
           </a>
         </p>
       </div>
@@ -200,8 +204,8 @@ const Confidentialite = () => (
         <p className="font-bold mb-1">Comment exercer vos droits :</p>
         <p>
           Adressez votre demande à{' '}
-          <a href="mailto:privacy@kreyolang.com" className="text-amber-800 font-bold hover:underline">
-            privacy@kreyolang.com
+          <a href="mailto:contact@kreyolang.com" className="text-amber-800 font-bold hover:underline">
+            contact@kreyolang.com
           </a>{' '}
           — Délai de réponse : <strong>30 jours maximum</strong>. En cas de réclamation non
           satisfaite, vous pouvez saisir la{' '}
@@ -244,8 +248,8 @@ const Confidentialite = () => (
         </li>
         <li>
           <strong>Par email :</strong>{' '}
-          <a href="mailto:privacy@kreyolang.com" className="text-purple-600 hover:underline">
-            privacy@kreyolang.com
+          <a href="mailto:contact@kreyolang.com" className="text-purple-600 hover:underline">
+            contact@kreyolang.com
           </a>
         </li>
       </ul>
@@ -258,8 +262,8 @@ const Confidentialite = () => (
       <p>
         Vous pouvez demander l'exportation de vos données de progression dans un format structuré
         et lisible (JSON) via{' '}
-        <a href="mailto:privacy@kreyolang.com" className="text-purple-600 hover:underline">
-          privacy@kreyolang.com
+        <a href="mailto:contact@kreyolang.com" className="text-purple-600 hover:underline">
+          contact@kreyolang.com
         </a>
         .
       </p>
@@ -308,15 +312,14 @@ const Confidentialite = () => (
       </p>
     </Article>
 
-    {/* Contact DPO */}
+    {/* Contact */}
     <Callout color="slate">
-      <p className="font-extrabold text-slate-900 mb-2">
-        Délégué à la Protection des Données (DPO)
-      </p>
-      <p>
-        Email :{' '}
-        <a href="mailto:privacy@kreyolang.com" className="text-purple-600 hover:underline">
-          privacy@kreyolang.com
+      <p className="font-extrabold text-slate-900 mb-2">CMJ Group — Marque Kreyolang</p>
+      <p>47, rue Vivienne – 75002 Paris</p>
+      <p className="mt-1">
+        Contact :{' '}
+        <a href="mailto:contact@kreyolang.com" className="text-purple-600 hover:underline">
+          contact@kreyolang.com
         </a>
       </p>
       <p className="mt-1">

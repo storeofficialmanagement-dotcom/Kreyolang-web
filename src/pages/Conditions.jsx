@@ -20,7 +20,8 @@ const Conditions = () => (
       <p>
         Kreyolang est une plateforme numérique d'apprentissage des langues créoles (créole haïtien,
         guadeloupéen, martiniquais, réunionnais et autres variantes), développée par{' '}
-        <strong>Kreyolang SAS</strong>.
+        <strong>CMJ Group</strong> (micro-entreprise), opérant sous la marque verbale{' '}
+        <strong>Kreyolang</strong>.
       </p>
       <p>
         La plateforme propose un environnement d'apprentissage gamifié inspiré de l'univers de la
@@ -125,7 +126,7 @@ const Conditions = () => (
         Les demandes de remboursement pour les achats effectués via l'App Store ou Google Play sont
         soumises aux politiques de remboursement respectives d'Apple et de Google. Pour les achats
         effectués sur le site web (via Stripe), toute demande peut être adressée à{' '}
-        <strong>support@kreyolang.com</strong> dans un délai de <strong>14 jours</strong> suivant
+        <strong>contact@kreyolang.com</strong> dans un délai de <strong>14 jours</strong> suivant
         la date d'achat, conformément au droit de rétractation légal (art. L221-18 du Code de la
         consommation).
       </p>
@@ -148,10 +149,10 @@ const Conditions = () => (
       <p className="mt-3">
         Il est strictement interdit de reproduire, copier, distribuer, modifier, vendre ou
         exploiter commercialement tout contenu de la plateforme sans autorisation écrite préalable
-        de Kreyolang SAS.
+        de CMJ Group.
       </p>
       <p>
-        Kreyolang accorde à l'utilisateur une <strong>licence personnelle, non-exclusive et
+        CMJ Group accorde à l'utilisateur une <strong>licence personnelle, non-exclusive et
         non-transférable</strong> d'utilisation de la plateforme, pour un usage strictement
         personnel et non commercial.
       </p>
@@ -204,7 +205,7 @@ const Conditions = () => (
         </li>
       </ul>
       <p className="mt-3">
-        La responsabilité de Kreyolang SAS, si elle venait à être engagée, ne saurait en tout
+        La responsabilité de CMJ Group, si elle venait à être engagée, ne saurait en tout
         état de cause excéder le montant total payé par l'utilisateur au cours des{' '}
         <strong>12 derniers mois</strong> précédant le fait générateur.
       </p>
@@ -220,31 +221,26 @@ const Conditions = () => (
       </p>
       <p>
         Pour toute question relative aux présentes conditions :{' '}
-        <a href="mailto:legal@kreyolang.com" className="text-purple-600 hover:underline font-semibold">
-          legal@kreyolang.com
+        <a href="mailto:contact@kreyolang.com" className="text-purple-600 hover:underline font-semibold">
+          contact@kreyolang.com
         </a>
       </p>
     </Article>
 
     {/* Contact */}
     <Callout color="slate">
-      <p className="font-extrabold text-slate-900 mb-2">Kreyolang SAS</p>
-      <p>
+      <p className="font-extrabold text-slate-900 mb-2">CMJ Group — Marque Kreyolang</p>
+      <p>47, rue Vivienne – 75002 Paris</p>
+      <p className="mt-1">
         Site web :{' '}
         <a href="https://www.kreyolang.com" className="text-purple-600 hover:underline">
           www.kreyolang.com
         </a>
       </p>
-      <p>
-        Email légal :{' '}
-        <a href="mailto:legal@kreyolang.com" className="text-purple-600 hover:underline">
-          legal@kreyolang.com
-        </a>
-      </p>
-      <p>
-        Support :{' '}
-        <a href="mailto:support@kreyolang.com" className="text-purple-600 hover:underline">
-          support@kreyolang.com
+      <p className="mt-1">
+        Contact :{' '}
+        <a href="mailto:contact@kreyolang.com" className="text-purple-600 hover:underline">
+          contact@kreyolang.com
         </a>
       </p>
     </Callout>
