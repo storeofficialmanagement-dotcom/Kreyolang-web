@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Check, X, Crown } from 'lucide-react';
 import useScrollAnimation from '../hooks/useScrollAnimation';
 import { useLanguage } from '../context/LanguageContext';
+import SectionTag from '../components/SectionTag';
 
 const txt = {
   FR: {
@@ -98,6 +99,7 @@ const PricingSection = ({ onCTA }) => {
     <section id="prix" className="py-20 bg-gradient-to-b from-slate-900 to-indigo-950">
       <div ref={ref} className="container mx-auto px-4">
         <div className="text-center mb-10">
+          <SectionTag label={lang === 'EN' ? 'Pricing' : 'Tarifs'} dark />
           <h2 className="text-3xl md:text-4xl font-extrabold text-white">{t.title}</h2>
           <p className="text-white/60 mt-3 max-w-xl mx-auto">{t.subtitle}</p>
         </div>

@@ -3,6 +3,7 @@ import { BookOpen, Music, UtensilsCrossed, Scroll, Sparkles, Lock, Crown } from 
 import { proverbs, history, music, cuisine, legends } from '../data/cultureData';
 import useScrollAnimation from '../hooks/useScrollAnimation';
 import { useLanguage } from '../context/LanguageContext';
+import SectionTag from '../components/SectionTag';
 
 const tabsFR = [
   { id: 'proverbes', label: 'Proverbes',  icon: <Scroll className="h-4 w-4" /> },
@@ -57,8 +58,8 @@ const PremiumOverlay = ({ count, label }) => (
   </div>
 );
 
-const titleFR = { h: "Plus qu'une langue, une culture", sub: "Kreyolang va au-delà de la grammaire. Découvrez les proverbes, l'histoire, la musique, la cuisine et les légendes qui font vibrer les cultures créoles et africaines." };
-const titleEN = { h: "More than a language, a culture", sub: "Kreyolang goes beyond grammar. Discover the proverbs, history, music, cuisine and legends that make Creole and African cultures come alive." };
+const titleFR = { tag: 'Culture', h: "Plus qu'une langue, une culture", sub: "Proverbes, histoire, musique, cuisine et légendes — l'univers créole et africain au-delà de la grammaire." };
+const titleEN = { tag: 'Culture', h: "More than a language, a culture", sub: "Proverbs, history, music, cuisine and legends — Creole and African culture beyond grammar." };
 
 const CultureSection = () => {
   const [activeTab, setActiveTab] = useState('proverbes');
@@ -71,12 +72,9 @@ const CultureSection = () => {
     <section id="culture" className="py-20 bg-white">
       <div ref={ref} className="container mx-auto px-4">
         <div className="text-center mb-10">
-          <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900">
-            {title.h}
-          </h2>
-          <p className="text-slate-500 mt-3 max-w-2xl mx-auto">
-            {title.sub}
-          </p>
+          <SectionTag label={title.tag} />
+          <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900">{title.h}</h2>
+          <p className="text-slate-500 mt-3 max-w-2xl mx-auto">{title.sub}</p>
         </div>
 
         {/* Tabs */}

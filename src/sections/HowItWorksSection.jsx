@@ -2,84 +2,37 @@ import React from 'react';
 import { Download, Globe, Gamepad2, Trophy } from 'lucide-react';
 import useScrollAnimation from '../hooks/useScrollAnimation';
 import { useLanguage } from '../context/LanguageContext';
+import SectionTag from '../components/SectionTag';
 
 const stepsFR = [
-  {
-    icon: <Download className="h-7 w-7" />,
-    title: "Téléchargez l'app",
-    desc: 'Disponible gratuitement sur iOS et Android.',
-    color: 'bg-indigo-100 text-indigo-600',
-    ring: 'ring-indigo-200',
-  },
-  {
-    icon: <Globe className="h-7 w-7" />,
-    title: 'Choisissez votre langue',
-    desc: "Créoles des Antilles, de l'océan Indien et langues d'Afrique.",
-    color: 'bg-purple-100 text-purple-600',
-    ring: 'ring-purple-200',
-  },
-  {
-    icon: <Gamepad2 className="h-7 w-7" />,
-    title: 'Jouez et progressez',
-    desc: 'Gagnez des XP, montez en ligue, gardez votre streak.',
-    color: 'bg-amber-100 text-amber-600',
-    ring: 'ring-amber-200',
-  },
-  {
-    icon: <Trophy className="h-7 w-7" />,
-    title: 'Devenez Amiral',
-    desc: 'Atteignez le sommet et maîtrisez la langue.',
-    color: 'bg-emerald-100 text-emerald-600',
-    ring: 'ring-emerald-200',
-  },
+  { icon: <Download className="h-7 w-7" />, title: "Téléchargez l'app", desc: 'Disponible gratuitement sur iOS et Android.', color: 'bg-indigo-100 text-indigo-600', ring: 'ring-indigo-200' },
+  { icon: <Globe className="h-7 w-7" />, title: 'Choisissez votre langue', desc: "Créoles des Antilles, de l'océan Indien et langues d'Afrique.", color: 'bg-violet-100 text-violet-600', ring: 'ring-violet-200' },
+  { icon: <Gamepad2 className="h-7 w-7" />, title: 'Jouez et progressez', desc: 'Gagnez des XP, montez en ligue, gardez votre streak.', color: 'bg-amber-100 text-amber-600', ring: 'ring-amber-200' },
+  { icon: <Trophy className="h-7 w-7" />, title: 'Devenez Amiral', desc: 'Atteignez le sommet et maîtrisez la langue.', color: 'bg-emerald-100 text-emerald-600', ring: 'ring-emerald-200' },
 ];
-
 const stepsEN = [
-  {
-    icon: <Download className="h-7 w-7" />,
-    title: 'Download the app',
-    desc: 'Free on iOS and Android.',
-    color: 'bg-indigo-100 text-indigo-600',
-    ring: 'ring-indigo-200',
-  },
-  {
-    icon: <Globe className="h-7 w-7" />,
-    title: 'Choose your language',
-    desc: 'Caribbean Creoles, Indian Ocean Creoles and African languages.',
-    color: 'bg-purple-100 text-purple-600',
-    ring: 'ring-purple-200',
-  },
-  {
-    icon: <Gamepad2 className="h-7 w-7" />,
-    title: 'Play & progress',
-    desc: 'Earn XP, climb the leagues, keep your streak alive.',
-    color: 'bg-amber-100 text-amber-600',
-    ring: 'ring-amber-200',
-  },
-  {
-    icon: <Trophy className="h-7 w-7" />,
-    title: 'Become Admiral',
-    desc: 'Reach the top and master the language.',
-    color: 'bg-emerald-100 text-emerald-600',
-    ring: 'ring-emerald-200',
-  },
+  { icon: <Download className="h-7 w-7" />, title: 'Download the app', desc: 'Free on iOS and Android.', color: 'bg-indigo-100 text-indigo-600', ring: 'ring-indigo-200' },
+  { icon: <Globe className="h-7 w-7" />, title: 'Choose your language', desc: 'Caribbean Creoles, Indian Ocean Creoles and African languages.', color: 'bg-violet-100 text-violet-600', ring: 'ring-violet-200' },
+  { icon: <Gamepad2 className="h-7 w-7" />, title: 'Play & progress', desc: 'Earn XP, climb the leagues, keep your streak alive.', color: 'bg-amber-100 text-amber-600', ring: 'ring-amber-200' },
+  { icon: <Trophy className="h-7 w-7" />, title: 'Become Admiral', desc: 'Reach the top and master the language.', color: 'bg-emerald-100 text-emerald-600', ring: 'ring-emerald-200' },
 ];
 
-const titleFR = { h: 'Comment ça marche ?', sub: 'En 4 étapes simples, maîtrisez une nouvelle langue.' };
-const titleEN = { h: 'How does it work?',   sub: 'Master a new language in 4 simple steps.' };
+const txtFR = { tag: 'Méthode', h: 'Comment ça marche ?', sub: 'En 4 étapes simples, maîtrisez une nouvelle langue.' };
+const txtEN = { tag: 'Method', h: 'How does it work?', sub: 'Master a new language in 4 simple steps.' };
 
 const HowItWorksSection = () => {
   const ref = useScrollAnimation();
   const { lang } = useLanguage();
   const steps = lang === 'EN' ? stepsEN : stepsFR;
-  const title = lang === 'EN' ? titleEN : titleFR;
+  const t = lang === 'EN' ? txtEN : txtFR;
 
   return (
     <section id="methode" className="py-20 bg-white">
       <div ref={ref} className="container mx-auto px-4">
         <div className="text-center mb-14">
-          <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900">{title.h}</h2>
-          <p className="text-slate-500 mt-3 max-w-xl mx-auto">{title.sub}</p>
+          <SectionTag label={t.tag} />
+          <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900">{t.h}</h2>
+          <p className="text-slate-500 mt-3 max-w-xl mx-auto">{t.sub}</p>
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
@@ -93,8 +46,8 @@ const HowItWorksSection = () => {
                   {i + 1}
                 </span>
               </div>
-              <h3 className="text-lg font-extrabold text-slate-900 mb-2">{step.title}</h3>
-              <p className="text-sm text-slate-500 leading-relaxed">{step.desc}</p>
+              <h3 className="text-sm md:text-lg font-extrabold text-slate-900 mb-2">{step.title}</h3>
+              <p className="text-xs md:text-sm text-slate-500 leading-relaxed">{step.desc}</p>
             </div>
           ))}
         </div>

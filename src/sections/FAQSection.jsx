@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { ChevronDown } from 'lucide-react';
 import useScrollAnimation from '../hooks/useScrollAnimation';
 import { useLanguage } from '../context/LanguageContext';
+import SectionTag from '../components/SectionTag';
 
 const faqFR = [
   { q: "Kreyolang est-il vraiment gratuit ?", a: "Oui ! Le compte gratuit donne accès aux premières leçons de chaque unité, au système de progression (XP, ligues, streaks) et à un nombre limité de sessions par jour. L'abonnement Premium débloque l'intégralité du contenu." },
@@ -53,8 +54,8 @@ const FAQItem = ({ q, a }) => {
   );
 };
 
-const titleFR = { h: 'Questions fréquentes', sub: "Tout ce que vous devez savoir avant d'embarquer." };
-const titleEN = { h: 'Frequently asked questions', sub: 'Everything you need to know before coming on board.' };
+const titleFR = { tag: 'FAQ', h: 'Questions fréquentes', sub: "Tout ce que vous devez savoir avant d'embarquer." };
+const titleEN = { tag: 'FAQ', h: 'Frequently asked questions', sub: 'Everything you need to know before coming on board.' };
 
 const FAQSection = () => {
   const ref = useScrollAnimation();
@@ -66,6 +67,7 @@ const FAQSection = () => {
     <section id="faq" className="py-20 bg-white">
       <div ref={ref} className="container mx-auto px-4 max-w-3xl">
         <div className="text-center mb-14">
+          <SectionTag label={title.tag} />
           <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900">{title.h}</h2>
           <p className="text-slate-500 mt-3">{title.sub}</p>
         </div>
