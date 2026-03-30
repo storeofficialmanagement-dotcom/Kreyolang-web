@@ -69,12 +69,12 @@ const LangCard = ({ l }) => (
 
 const SwipeCarousel = ({ items, hint }) => {
   const [swiped, setSwiped] = React.useState(false);
+  const [progress, setProgress] = React.useState(0);
   const scrollRef = React.useRef(null);
 
   React.useEffect(() => {
     const el = scrollRef.current;
     if (!el) return;
-    // Peek animation : glisse à droite puis revient
     const t1 = setTimeout(() => {
       el.scrollTo({ left: 72, behavior: 'smooth' });
     }, 800);
@@ -84,19 +84,35 @@ const SwipeCarousel = ({ items, hint }) => {
     return () => { clearTimeout(t1); clearTimeout(t2); };
   }, []);
 
+  const handleScroll = () => {
+    const el = scrollRef.current;
+    if (!el) return;
+    setSwiped(true);
+    const pct = el.scrollLeft / (el.scrollWidth - el.clientWidth);
+    setProgress(Math.min(pct, 1));
+  };
+
   return (
     <div className="relative">
       <div
         ref={scrollRef}
         className="flex gap-4 overflow-x-auto snap-x snap-mandatory pb-3 -mx-4 px-4 scrollbar-hide"
-        onScroll={() => setSwiped(true)}
+        onScroll={handleScroll}
       >
         {items.map((l, i) => <LangCard key={i} l={l} />)}
       </div>
 
+      {/* Barre de progression */}
+      <div className="mt-3 h-1 rounded-full bg-slate-200 overflow-hidden">
+        <div
+          className="h-full rounded-full bg-violet-400 transition-all duration-150"
+          style={{ width: `${Math.max(progress * 100, 18)}%` }}
+        />
+      </div>
+
       {/* Fade + hint — disparaît après le premier glissement */}
       {!swiped && (
-        <div className="absolute right-0 top-0 bottom-3 w-28 pointer-events-none flex items-center justify-end pr-2"
+        <div className="absolute right-0 top-0 bottom-7 w-28 pointer-events-none flex items-center justify-end pr-2"
           style={{ background: 'linear-gradient(to right, transparent, rgba(248,250,252,0.95))' }}>
           <span className="flex items-center gap-1 text-[11px] font-extrabold text-slate-400 bg-white/80 rounded-full px-2.5 py-1 shadow-sm border border-slate-100">
             {hint} →
