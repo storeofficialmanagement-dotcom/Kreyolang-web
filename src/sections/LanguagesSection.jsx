@@ -69,10 +69,25 @@ const LangCard = ({ l }) => (
 
 const SwipeCarousel = ({ items, hint }) => {
   const [swiped, setSwiped] = React.useState(false);
+  const scrollRef = React.useRef(null);
+
+  React.useEffect(() => {
+    const el = scrollRef.current;
+    if (!el) return;
+    // Peek animation : glisse à droite puis revient
+    const t1 = setTimeout(() => {
+      el.scrollTo({ left: 72, behavior: 'smooth' });
+    }, 800);
+    const t2 = setTimeout(() => {
+      el.scrollTo({ left: 0, behavior: 'smooth' });
+    }, 1500);
+    return () => { clearTimeout(t1); clearTimeout(t2); };
+  }, []);
+
   return (
     <div className="relative">
-      {/* Scroll strip */}
       <div
+        ref={scrollRef}
         className="flex gap-4 overflow-x-auto snap-x snap-mandatory pb-3 -mx-4 px-4 scrollbar-hide"
         onScroll={() => setSwiped(true)}
       >
