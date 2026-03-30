@@ -82,7 +82,7 @@ const HowItWorksSection = () => {
           <p className="text-slate-500 mt-3 max-w-xl mx-auto">{title.sub}</p>
         </div>
 
-        <div className="grid md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
           {steps.map((step, i) => (
             <div key={i} className="flex flex-col items-center text-center group">
               <div className="relative mb-5">

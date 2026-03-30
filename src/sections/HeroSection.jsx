@@ -7,7 +7,7 @@ const txt = {
     badge1: 'Nouveau',
     badge2: "L'app qui sauve vos racines",
     title1: 'Apprenez le Créole',
-    title2: 'et les langues d\'Afrique',
+    title2: "et les langues d'Afrique",
     titleAccent: 'en vous amusant.',
     subtitle: 'Vos grands-parents parlent créole ou wolof. Vos enfants ne le comprennent plus.',
     subtitleBold: 'Changez ça en 5 minutes par jour.',
@@ -35,11 +35,11 @@ const HeroSection = ({ onCTA }) => {
 
   return (
     <section className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-indigo-950 to-[#0A0820]">
-      {/* Decorative background blobs */}
+      {/* Decorative blobs */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        <div className="absolute -top-40 -left-40 w-[600px] h-[600px] bg-purple-700/20 rounded-full blur-[120px]" />
+        <div className="absolute -top-40 -left-40 w-[600px] h-[600px] bg-violet-700/20 rounded-full blur-[120px]" />
         <div className="absolute -bottom-20 -right-20 w-[500px] h-[500px] bg-indigo-600/20 rounded-full blur-[100px]" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-violet-900/10 rounded-full blur-[80px]" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-purple-900/10 rounded-full blur-[80px]" />
         {/* Stars */}
         {[
           'top-[10%] left-[8%]', 'top-[25%] left-[20%]', 'top-[60%] left-[5%]',
@@ -66,7 +66,7 @@ const HeroSection = ({ onCTA }) => {
           {/* Headline */}
           <h1 className="text-4xl md:text-6xl font-extrabold leading-tight text-white">
             {t.title1}<br />{t.title2}<br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-orange-400">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-300 to-indigo-200">
               {t.titleAccent}
             </span>
           </h1>
@@ -80,7 +80,7 @@ const HeroSection = ({ onCTA }) => {
           {/* Social proof */}
           <div className="flex items-center justify-center md:justify-start gap-3">
             <div className="flex -space-x-2">
-              {['bg-purple-500', 'bg-indigo-500', 'bg-amber-500', 'bg-emerald-500'].map((c, i) => (
+              {['bg-purple-500', 'bg-indigo-500', 'bg-violet-500', 'bg-emerald-500'].map((c, i) => (
                 <div key={i} className={`w-8 h-8 ${c} rounded-full border-2 border-white/20 flex items-center justify-center text-[10px] font-bold text-white`}>
                   {['MC', 'JP', 'LK', 'SD'][i]}
                 </div>
@@ -95,10 +95,10 @@ const HeroSection = ({ onCTA }) => {
           <div className="flex flex-col sm:flex-row justify-center md:justify-start gap-4 pt-2">
             <button
               onClick={onCTA}
-              className="group relative bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-400 hover:to-orange-400 text-white font-extrabold text-lg py-4 px-8 w-full sm:w-auto rounded-2xl shadow-lg shadow-amber-900/40 border-b-[4px] border-amber-700 active:border-b-0 active:translate-y-[4px] transition-all duration-150 flex items-center justify-center overflow-hidden"
+              className="group relative bg-gradient-to-r from-violet-600 to-indigo-600 hover:from-violet-500 hover:to-indigo-500 text-white font-extrabold text-lg py-4 px-8 w-full sm:w-auto rounded-2xl shadow-lg shadow-indigo-900/50 border-b-[4px] border-indigo-800 active:border-b-0 active:translate-y-[4px] transition-all duration-150 flex items-center justify-center overflow-hidden"
             >
               <span className="relative z-10">{t.cta1}</span>
-              <div className="absolute top-0 -left-[100%] w-1/2 h-full bg-gradient-to-r from-transparent via-white/30 to-transparent -skew-x-[30deg] group-hover:left-[200%] transition-all duration-700 ease-in-out" />
+              <div className="absolute top-0 -left-[100%] w-1/2 h-full bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-[30deg] group-hover:left-[200%] transition-all duration-700 ease-in-out" />
             </button>
             <button
               onClick={onCTA}
@@ -111,12 +111,11 @@ const HeroSection = ({ onCTA }) => {
 
         {/* Right — iPhone mockup */}
         <div className="flex-1 flex justify-center relative">
-          {/* Glow behind phone */}
-          <div className="absolute w-[280px] h-[280px] md:w-[380px] md:h-[380px] bg-gradient-to-tr from-purple-600/30 to-indigo-500/30 rounded-full blur-3xl" />
+          <div className="absolute w-[280px] h-[280px] md:w-[380px] md:h-[380px] bg-gradient-to-tr from-violet-600/25 to-indigo-500/25 rounded-full blur-3xl" />
           <div className="relative z-10 drop-shadow-2xl">
             <IPhoneMockup>
               <img
-                src="/screenshots/quiz7.png"
+                src="/screenshots/map.png"
                 alt="Kreyolang app"
                 className="w-full h-full object-cover object-top"
                 draggable={false}

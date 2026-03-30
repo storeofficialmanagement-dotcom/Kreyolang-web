@@ -38,7 +38,7 @@ const ExercisesSection = () => {
           <p className="text-slate-500 mt-3 max-w-xl mx-auto">{title.sub}</p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 max-w-4xl mx-auto">
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5 max-w-4xl mx-auto">
           {highlights.map((h, i) => (
             <div key={i} className="bg-white rounded-2xl border-2 border-b-[5px] border-slate-100 hover:border-slate-200 p-6 hover:-translate-y-1 transition-all duration-300 group">
               <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${h.color} flex items-center justify-center text-white mb-4 group-hover:scale-110 transition-transform duration-300`}>
