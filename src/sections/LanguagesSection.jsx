@@ -39,6 +39,7 @@ const txtFR = {
   african: 'Langues Africaines',
   comingSoon: 'Bientôt',
   moreAfrican: "Et bien d'autres langues africaines à venir...",
+  hint: 'Glisser',
 };
 const txtEN = {
   tag: 'Languages',
@@ -49,6 +50,7 @@ const txtEN = {
   african: 'African Languages',
   comingSoon: 'Coming soon',
   moreAfrican: 'And many more African languages coming soon...',
+  hint: 'Swipe',
 };
 
 const LangCard = ({ l }) => (
@@ -65,11 +67,30 @@ const LangCard = ({ l }) => (
   </div>
 );
 
-const SwipeCarousel = ({ items }) => (
-  <div className="flex gap-4 overflow-x-auto snap-x snap-mandatory pb-3 -mx-4 px-4 scrollbar-hide">
-    {items.map((l, i) => <LangCard key={i} l={l} />)}
-  </div>
-);
+const SwipeCarousel = ({ items, hint }) => {
+  const [swiped, setSwiped] = React.useState(false);
+  return (
+    <div className="relative">
+      {/* Scroll strip */}
+      <div
+        className="flex gap-4 overflow-x-auto snap-x snap-mandatory pb-3 -mx-4 px-4 scrollbar-hide"
+        onScroll={() => setSwiped(true)}
+      >
+        {items.map((l, i) => <LangCard key={i} l={l} />)}
+      </div>
+
+      {/* Fade + hint — disparaît après le premier glissement */}
+      {!swiped && (
+        <div className="absolute right-0 top-0 bottom-3 w-28 pointer-events-none flex items-center justify-end pr-2"
+          style={{ background: 'linear-gradient(to right, transparent, rgba(248,250,252,0.95))' }}>
+          <span className="flex items-center gap-1 text-[11px] font-extrabold text-slate-400 bg-white/80 rounded-full px-2.5 py-1 shadow-sm border border-slate-100">
+            {hint} →
+          </span>
+        </div>
+      )}
+    </div>
+  );
+};
 
 const LanguagesSection = () => {
   const ref = useScrollAnimation();
@@ -93,7 +114,7 @@ const LanguagesSection = () => {
             <h3 className="text-sm font-extrabold text-slate-700 mb-5 flex items-center gap-2">
               <span className="w-2 h-2 bg-violet-500 rounded-full" />{t.creoles}
             </h3>
-            <SwipeCarousel items={creoles} />
+            <SwipeCarousel items={creoles} hint={t.hint} />
             <p className="text-xs text-violet-500 font-bold mt-4 flex items-center gap-1.5">
               <Sparkles className="h-3 w-3" />{t.moreCreoles}
             </p>
@@ -105,7 +126,7 @@ const LanguagesSection = () => {
               <span className="w-2 h-2 bg-amber-500 rounded-full" />{t.african}
               <span className="text-[10px] bg-amber-100 text-amber-700 font-extrabold px-2 py-0.5 rounded-full">{t.comingSoon}</span>
             </h3>
-            <SwipeCarousel items={african} />
+            <SwipeCarousel items={african} hint={t.hint} />
             <p className="text-xs text-amber-500 font-bold mt-4 flex items-center gap-1.5">
               <Sparkles className="h-3 w-3" />{t.moreAfrican}
             </p>
