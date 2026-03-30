@@ -230,6 +230,7 @@ const Conditions = () => (
     {/* Contact */}
     <Callout color="slate">
       <p className="font-extrabold text-slate-900 mb-2">CMJ Group — Marque Kreyolang</p>
+      <p>SIREN : 879 333 664</p>
       <p>47, rue Vivienne – 75002 Paris</p>
       <p className="mt-1">
         Site web :{' '}
