@@ -4,14 +4,17 @@ import LandingPage from './pages/LandingPage';
 import Conditions from './pages/Conditions';
 import Confidentialite from './pages/Confidentialite';
 import MentionsLegales from './pages/MentionsLegales';
+import { LanguageProvider } from './context/LanguageContext';
 
 const App = () => (
-  <Routes>
-    <Route path="/" element={<LandingPage />} />
-    <Route path="/conditions" element={<Conditions />} />
-    <Route path="/confidentialite" element={<Confidentialite />} />
-    <Route path="/mentions-legales" element={<MentionsLegales />} />
-  </Routes>
+  <LanguageProvider>
+    <Routes>
+      <Route path="/" element={<LandingPage />} />
+      <Route path="/conditions" element={<Conditions />} />
+      <Route path="/confidentialite" element={<Confidentialite />} />
+      <Route path="/mentions-legales" element={<MentionsLegales />} />
+    </Routes>
+  </LanguageProvider>
 );
 
 export default App;

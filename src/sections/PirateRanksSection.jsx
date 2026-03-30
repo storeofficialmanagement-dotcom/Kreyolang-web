@@ -1,19 +1,25 @@
 import React from 'react';
 import { pirateRanks } from '../data/cultureData';
 import useScrollAnimation from '../hooks/useScrollAnimation';
+import { useLanguage } from '../context/LanguageContext';
+
+const titleFR = { h: 'De Moussaillon à Amiral', sub: 'Gravissez les 8 rangs pirates au fil de votre apprentissage. Chaque rang débloque un nouveau navire.' };
+const titleEN = { h: 'From Deckhand to Admiral', sub: 'Climb the 8 pirate ranks as you learn. Each rank unlocks a new vessel.' };
 
 const PirateRanksSection = () => {
   const ref = useScrollAnimation();
+  const { lang } = useLanguage();
+  const title = lang === 'EN' ? titleEN : titleFR;
 
   return (
     <section id="rangs" className="py-20 bg-gradient-to-b from-purple-950 via-purple-900 to-indigo-950 text-white overflow-hidden">
       <div ref={ref} className="container mx-auto px-4">
         <div className="text-center mb-14">
           <h2 className="text-3xl md:text-4xl font-extrabold">
-            De Moussaillon à Amiral
+            {title.h}
           </h2>
           <p className="text-purple-200/70 mt-3 max-w-xl mx-auto">
-            Gravissez les 8 rangs pirates au fil de votre apprentissage. Chaque rang débloque un nouveau navire.
+            {title.sub}
           </p>
         </div>
 

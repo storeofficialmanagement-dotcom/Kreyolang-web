@@ -2,13 +2,21 @@ import React, { useState } from 'react';
 import { BookOpen, Music, UtensilsCrossed, Scroll, Sparkles, Lock, Crown } from 'lucide-react';
 import { proverbs, history, music, cuisine, legends } from '../data/cultureData';
 import useScrollAnimation from '../hooks/useScrollAnimation';
+import { useLanguage } from '../context/LanguageContext';
 
-const tabs = [
+const tabsFR = [
   { id: 'proverbes', label: 'Proverbes',  icon: <Scroll className="h-4 w-4" /> },
   { id: 'histoire',  label: 'Histoire',   icon: <BookOpen className="h-4 w-4" /> },
   { id: 'musique',   label: 'Musique',    icon: <Music className="h-4 w-4" /> },
   { id: 'cuisine',   label: 'Cuisine',    icon: <UtensilsCrossed className="h-4 w-4" /> },
   { id: 'legendes',  label: 'Légendes',   icon: <Sparkles className="h-4 w-4" /> },
+];
+const tabsEN = [
+  { id: 'proverbes', label: 'Proverbs',  icon: <Scroll className="h-4 w-4" /> },
+  { id: 'histoire',  label: 'History',   icon: <BookOpen className="h-4 w-4" /> },
+  { id: 'musique',   label: 'Music',     icon: <Music className="h-4 w-4" /> },
+  { id: 'cuisine',   label: 'Cuisine',   icon: <UtensilsCrossed className="h-4 w-4" /> },
+  { id: 'legendes',  label: 'Legends',   icon: <Sparkles className="h-4 w-4" /> },
 ];
 
 const categoryColors = {
@@ -49,20 +57,25 @@ const PremiumOverlay = ({ count, label }) => (
   </div>
 );
 
+const titleFR = { h: "Plus qu'une langue, une culture", sub: "Kreyolang va au-delà de la grammaire. Découvrez les proverbes, l'histoire, la musique, la cuisine et les légendes qui font vibrer les cultures créoles et africaines." };
+const titleEN = { h: "More than a language, a culture", sub: "Kreyolang goes beyond grammar. Discover the proverbs, history, music, cuisine and legends that make Creole and African cultures come alive." };
+
 const CultureSection = () => {
   const [activeTab, setActiveTab] = useState('proverbes');
   const ref = useScrollAnimation();
+  const { lang } = useLanguage();
+  const tabs = lang === 'EN' ? tabsEN : tabsFR;
+  const title = lang === 'EN' ? titleEN : titleFR;
 
   return (
     <section id="culture" className="py-20 bg-white">
       <div ref={ref} className="container mx-auto px-4">
         <div className="text-center mb-10">
           <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900">
-            Plus qu'une langue, une culture
+            {title.h}
           </h2>
           <p className="text-slate-500 mt-3 max-w-2xl mx-auto">
-            Kreyolang va au-delà de la grammaire. Découvrez les proverbes, l'histoire, la musique,
-            la cuisine et les légendes qui font vibrer les cultures créoles et africaines.
+            {title.sub}
           </p>
         </div>
 

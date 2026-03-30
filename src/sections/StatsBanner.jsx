@@ -1,16 +1,26 @@
 import React from 'react';
 import useScrollAnimation from '../hooks/useScrollAnimation';
+import { useLanguage } from '../context/LanguageContext';
 
-const stats = [
-  { value: '5 000+',  label: 'Apprenants' },
-  { value: '8+',      label: 'Langues' },
-  { value: '500+',    label: 'Leçons' },
-  { value: '17+',     label: 'Types d\'exercices' },
-  { value: '4.8/5',   label: 'Note moyenne' },
+const statsFR = [
+  { value: '5 000+', label: 'Apprenants' },
+  { value: '8+',     label: 'Langues' },
+  { value: '500+',   label: 'Leçons' },
+  { value: '17+',    label: "Types d'exercices" },
+  { value: '4.8/5',  label: 'Note moyenne' },
+];
+const statsEN = [
+  { value: '5,000+', label: 'Learners' },
+  { value: '8+',     label: 'Languages' },
+  { value: '500+',   label: 'Lessons' },
+  { value: '17+',    label: 'Exercise types' },
+  { value: '4.8/5',  label: 'Avg. rating' },
 ];
 
 const StatsBanner = () => {
   const ref = useScrollAnimation();
+  const { lang } = useLanguage();
+  const stats = lang === 'EN' ? statsEN : statsFR;
 
   return (
     <section className="py-10 bg-gradient-to-r from-indigo-600 to-purple-700">

@@ -1,18 +1,29 @@
 import React, { useState } from 'react';
 import { Globe, Menu, X } from 'lucide-react';
+import { useLanguage } from '../context/LanguageContext';
 
-const navLinks = [
-  { label: 'Méthode',   href: '#methode' },
+const navFR = [
+  { label: 'Méthode',        href: '#methode' },
   { label: 'Fonctionnalités', href: '#features' },
+  { label: 'Culture',        href: '#culture' },
+  { label: 'Langues',        href: '#langues' },
+  { label: 'Prix',           href: '#prix' },
+  { label: 'FAQ',            href: '#faq' },
+];
+const navEN = [
+  { label: 'Method',    href: '#methode' },
+  { label: 'Features',  href: '#features' },
   { label: 'Culture',   href: '#culture' },
-  { label: 'Langues',   href: '#langues' },
-  { label: 'Prix',      href: '#prix' },
+  { label: 'Languages', href: '#langues' },
+  { label: 'Pricing',   href: '#prix' },
   { label: 'FAQ',       href: '#faq' },
 ];
 
 const Navbar = ({ onCTA }) => {
-  const [language, setLanguage] = useState('FR');
+  const { lang, setLang } = useLanguage();
   const [menuOpen, setMenuOpen] = useState(false);
+  const navLinks = lang === 'EN' ? navEN : navFR;
+  const ctaLabel = lang === 'EN' ? 'GET STARTED' : "C'EST PARTI";
 
   return (
     <header className="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-slate-100">
@@ -44,17 +55,17 @@ const Navbar = ({ onCTA }) => {
         <div className="flex items-center gap-3">
           <button
             className="flex items-center gap-2 font-bold text-slate-600 hover:bg-slate-100 py-2 px-3 rounded-2xl transition-colors text-sm"
-            onClick={() => setLanguage(l => l === 'FR' ? 'EN' : 'FR')}
+            onClick={() => setLang(lang === 'FR' ? 'EN' : 'FR')}
           >
             <Globe className="h-4 w-4" />
-            <span>{language}</span>
+            <span>{lang}</span>
           </button>
 
           <button
             onClick={onCTA}
             className="hidden md:block bg-purple-600 hover:bg-purple-500 text-white font-extrabold text-sm py-2.5 px-5 rounded-xl border-b-[4px] border-purple-800 active:border-b-0 active:translate-y-[4px] transition-all duration-150"
           >
-            C'EST PARTI
+            {ctaLabel}
           </button>
 
           {/* Mobile hamburger */}
@@ -85,7 +96,7 @@ const Navbar = ({ onCTA }) => {
             onClick={() => { setMenuOpen(false); onCTA(); }}
             className="w-full mt-2 bg-purple-600 hover:bg-purple-500 text-white font-extrabold text-sm py-3 rounded-xl border-b-[4px] border-purple-800 active:border-b-0 active:translate-y-[4px] transition-all duration-150"
           >
-            C'EST PARTI
+            {ctaLabel}
           </button>
         </div>
       )}
