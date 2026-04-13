@@ -41,9 +41,10 @@ const Conditions = () => (
       <SubTitle>2.1 Conditions d'éligibilité</SubTitle>
       <p>
         L'utilisation de Kreyolang est réservée aux personnes physiques âgées d'au moins{' '}
-        <strong>13 ans</strong> (ou <strong>16 ans</strong> pour les résidents de l'Union
-        Européenne). En créant un compte, l'utilisateur confirme remplir ces conditions. Pour les
-        mineurs, le consentement parental explicite est requis avant toute inscription.
+        <strong>15 ans</strong> (seuil de consentement numérique en France, art. 7-1 loi
+        Informatique et Libertés, transposition de l'art. 8 du RGPD). En créant un compte,
+        l'utilisateur confirme remplir cette condition d'âge. Pour les mineurs de moins de 15 ans,
+        le consentement d'un parent ou tuteur légal est requis avant toute inscription.
       </p>
 
       <SubTitle>2.2 Compte Gratuit</SubTitle>

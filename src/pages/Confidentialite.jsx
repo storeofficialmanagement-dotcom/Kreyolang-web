@@ -35,7 +35,7 @@ const Table = ({ headers, rows }) => (
 );
 
 const Confidentialite = () => (
-  <LegalPage title="Politique de Confidentialité" lastUpdated="Février 2026">
+  <LegalPage title="Politique de Confidentialité" lastUpdated="Avril 2026">
 
     {/* Préambule */}
     <Callout color="indigo">
@@ -177,6 +177,21 @@ const Confidentialite = () => (
             <strong className="text-slate-900">Stripe</strong>,
             'Traitement sécurisé des paiements web',
             'USA / UE — Certifié PCI-DSS Niveau 1',
+          ],
+          [
+            <strong className="text-slate-900">Sentry</strong>,
+            'Monitoring erreurs et stabilité de l\'application',
+            'UE — Hébergement EU, données minimisées (userId + email uniquement)',
+          ],
+          [
+            <strong className="text-slate-900">Expo</strong>,
+            'Envoi de notifications push (rappels d\'apprentissage)',
+            'USA — Seul le token push + contenu notification sont transmis',
+          ],
+          [
+            <strong className="text-slate-900">Resend</strong>,
+            'Envoi d\'emails transactionnels (bienvenue, confirmation)',
+            'USA — Seule l\'adresse email destinataire est transmise',
           ],
         ]}
       />
