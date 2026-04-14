@@ -20,8 +20,8 @@ const Conditions = () => (
       <p>
         Kreyolang est une plateforme numérique d'apprentissage des langues créoles (créole haïtien,
         guadeloupéen, martiniquais, réunionnais et autres variantes), développée par{' '}
-        <strong>CMJ Group</strong> (micro-entreprise), opérant sous la marque verbale{' '}
-        <strong>Kreyolang</strong>.
+        <strong>Christopher Jeanne EI</strong> (entrepreneur individuel, opérant sous le nom commercial CMJ Group et la marque verbale{' '}
+        <strong>Kreyolang</strong>).
       </p>
       <p>
         La plateforme propose un environnement d'apprentissage gamifié inspiré de l'univers de la
@@ -230,7 +230,7 @@ const Conditions = () => (
 
     {/* Contact */}
     <Callout color="slate">
-      <p className="font-extrabold text-slate-900 mb-2">CMJ Group — Marque Kreyolang</p>
+      <p className="font-extrabold text-slate-900 mb-2">Christopher Jeanne EI — CMJ Group — Marque Kreyolang</p>
       <p>SIREN : 879 333 664</p>
       <p>47, rue Vivienne – 75002 Paris</p>
       <p className="mt-1">

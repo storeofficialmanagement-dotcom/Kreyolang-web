@@ -39,7 +39,7 @@ const Confidentialite = () => (
 
     {/* Préambule */}
     <Callout color="indigo">
-      Cette politique décrit comment <strong>CMJ Group</strong> (opérant sous la marque{' '}
+      Cette politique décrit comment <strong>Christopher Jeanne EI</strong> (opérant sous le nom commercial CMJ Group et la marque{' '}
       <strong>Kreyolang</strong>) collecte, utilise et protège vos données personnelles,
       conformément au{' '}
       <strong>Règlement Général sur la Protection des Données (RGPD — UE 2016/679)</strong>, aux
@@ -51,7 +51,7 @@ const Confidentialite = () => (
     <Article title="Article 1 — Responsable du traitement">
       <div className="bg-white border border-slate-200 rounded-2xl p-5 space-y-1.5 text-sm">
         <p>
-          <strong className="text-slate-800">Entité :</strong> CMJ Group (micro-entreprise), opérant sous la marque verbale <strong>Kreyolang</strong>
+          <strong className="text-slate-800">Entrepreneur individuel :</strong> Christopher Jeanne EI, opérant sous le nom commercial CMJ Group et la marque verbale <strong>Kreyolang</strong>
         </p>
         <p>
           <strong className="text-slate-800">SIREN :</strong> 879 333 664
@@ -332,7 +332,7 @@ const Confidentialite = () => (
 
     {/* Contact */}
     <Callout color="slate">
-      <p className="font-extrabold text-slate-900 mb-2">CMJ Group — Marque Kreyolang</p>
+      <p className="font-extrabold text-slate-900 mb-2">Christopher Jeanne EI — CMJ Group — Marque Kreyolang</p>
       <p>SIREN : 879 333 664</p>
       <p>47, rue Vivienne – 75002 Paris</p>
       <p className="mt-1">
