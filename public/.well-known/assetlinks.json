@@ -1,12 +1,12 @@
 [
-    {
-          "relation": ["delegate_permission/common.handle_all_urls"],
-          "target": {
-                  "namespace": "android_app",
-                  "package_name": "com.kreyolangapp.kreyolang",
-                  "sha256_cert_fingerprints": [
-                            "REMPLACER_APRES_PREMIER_BUILD_ANDROID_PRODUCTION"
-                  ]
-          }
-    }
+      {
+              "relation": ["delegate_permission/common.handle_all_urls"],
+              "target": {
+                        "namespace": "android_app",
+                        "package_name": "com.kreyolangapp.kreyolang",
+                        "sha256_cert_fingerprints": [
+                                    "EE:64:0F:39:B7:C0:FD:DD:7A:42:88:CE:28:44:5F:88:F8:B0:9C:68:FF:BB:F2:E1:E2:C7:85:9C:98:3A:B9:6C"
+                        ]
+              }
+      }
 ]
