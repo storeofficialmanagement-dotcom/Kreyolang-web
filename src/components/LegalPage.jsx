@@ -34,7 +34,7 @@ export const Callout = ({ color = 'amber', children }) => {
 };
 
 // ─── Layout principal des pages légales ────────────────
-const LegalPage = ({ title, lastUpdated, children }) => (
+const LegalPage = ({ title, lastUpdated, badge = 'Document légal', children }) => (
   <div className="min-h-screen bg-white font-sans text-slate-800">
 
     {/* ── Header sticky ── */}
@@ -65,7 +65,7 @@ const LegalPage = ({ title, lastUpdated, children }) => (
       {/* En-tête du document */}
       <div className="mb-10 pb-8 border-b border-slate-100">
         <span className="inline-block text-xs font-extrabold uppercase tracking-widest text-purple-600 bg-purple-50 px-3 py-1 rounded-full mb-4">
-          Document légal
+          {badge}
         </span>
         <h1 className="text-3xl sm:text-4xl font-extrabold text-slate-900 mb-3 leading-tight">
           {title}
@@ -92,6 +92,7 @@ const LegalPage = ({ title, lastUpdated, children }) => (
         <div className="flex gap-5">
           <Link to="/conditions"      className="hover:text-purple-600 transition-colors">CGU / CGV</Link>
           <Link to="/confidentialite" className="hover:text-purple-600 transition-colors">Confidentialité</Link>
+          <Link to="/delete-account"  className="hover:text-purple-600 transition-colors">Supprimer mon compte</Link>
           <a href="mailto:legal@kreyolang.com" className="hover:text-purple-600 transition-colors">
             legal@kreyolang.com
           </a>
