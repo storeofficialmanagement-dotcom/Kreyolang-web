@@ -70,15 +70,17 @@ const DeleteAccount = () => (
         <Step number="1" title="Ouvrez Kreyolang">
           Lancez l'application sur votre appareil iOS ou Android.
         </Step>
-        <Step number="2" title="Accédez à votre profil">
-          Appuyez sur votre avatar ou l'icône de profil en bas de l'écran.
+        <Step number="2" title="Onglet Profil">
+          Appuyez sur l'onglet <strong>Profil</strong> dans la barre de navigation en bas de l'écran.
         </Step>
-        <Step number="3" title="Paramètres du compte">
-          Sélectionnez <strong>Paramètres</strong> puis <strong>Mon compte</strong>.
+        <Step number="3" title="Ouvrez les Paramètres">
+          Appuyez sur l'icône <strong>Paramètres</strong> (roue dentée) en haut de votre profil,
+          puis sélectionnez <strong>Mon Compte</strong> dans la liste.
         </Step>
-        <Step number="4" title="Supprimer le compte">
-          Appuyez sur <strong>Supprimer mon compte</strong> et confirmez votre choix.
-          La suppression est lancée immédiatement.
+        <Step number="4" title="Supprimer le profil">
+          En bas de la page <strong>Mon Compte</strong>, appuyez sur <strong>Supprimer le profil</strong>,
+          puis confirmez votre choix (une double confirmation est demandée pour éviter toute suppression accidentelle).
+          La suppression est lancée immédiatement et de manière irréversible.
         </Step>
       </div>
     </Article>
@@ -88,12 +90,12 @@ const DeleteAccount = () => (
       <div className="flex items-start gap-4 bg-slate-50 border border-slate-200 rounded-2xl p-5">
         <Clock className="h-5 w-5 text-purple-600 shrink-0 mt-0.5" />
         <div className="space-y-1 text-sm">
-          <p className="font-extrabold text-slate-800">Maximum 30 jours</p>
+          <p className="font-extrabold text-slate-800">Suppression immédiate</p>
           <p className="text-slate-500">
-            Votre compte est désactivé immédiatement après confirmation. La suppression
-            définitive de toutes les données associées intervient dans un délai maximum de{' '}
-            <strong>30 jours</strong>. Vous recevrez une confirmation par e-mail une fois
-            la suppression effectuée.
+            Dès votre confirmation, votre compte d'authentification et l'intégralité de vos
+            données personnelles associées sont <strong>supprimés immédiatement</strong> de
+            nos serveurs (suppression physique en cascade — aucune conservation différée
+            côté Kreyolang). L'opération est irréversible et ne peut être annulée.
           </p>
         </div>
       </div>
@@ -118,46 +120,46 @@ const DeleteAccount = () => (
           </thead>
           <tbody>
             <DataRow
-              category="Profil (prénom, e-mail, avatar)"
+              category="Profil (prénom, nom, e-mail, téléphone, avatar, pseudo)"
               deleted={true}
               duration="Immédiat"
               retained="—"
             />
             <DataRow
-              category="Progression (XP, streak, niveaux, ligues)"
+              category="Progression (XP, streak, niveaux, ligues, trophées)"
               deleted={true}
               duration="Immédiat"
               retained="—"
             />
             <DataRow
-              category="Préférences et paramètres"
+              category="Préférences et paramètres in-app"
               deleted={true}
               duration="Immédiat"
               retained="—"
             />
             <DataRow
-              category="Historique d'activité in-app"
+              category="Interactions sociales (amis, messages, signalements)"
               deleted={true}
-              duration="Sous 30 jours"
+              duration="Immédiat"
               retained="—"
             />
             <DataRow
-              category="Données de facturation / abonnement Premium"
+              category="Transactions d'achat (Premium, gemmes) côté Kreyolang"
+              deleted={true}
+              duration="Immédiat"
+              retained="—"
+            />
+            <DataRow
+              category="Justificatifs de paiement (Apple, Google, RevenueCat)"
               deleted={false}
-              duration="5 ans"
-              retained="Obligation comptable légale (Code de commerce, art. L.123-22)"
+              duration="Selon leurs politiques"
+              retained="Conservation par les intermédiaires de paiement (Merchant of Record)"
             />
             <DataRow
               category="Historique des e-mails de support"
               deleted={false}
               duration="12 mois"
               retained="Traitement des litiges et service après-vente"
-            />
-            <DataRow
-              category="Identifiant anonymisé anti-fraude"
-              deleted={false}
-              duration="6 mois"
-              retained="Sécurité et prévention des abus (données non réidentifiables)"
             />
           </tbody>
         </table>
@@ -171,6 +173,33 @@ const DeleteAccount = () => (
           depuis l'App Store ou le Google Play Store avant de supprimer votre compte.
           La suppression du compte ne résilie pas automatiquement votre abonnement.
         </p>
+      </div>
+
+      {/* Note justificatifs de paiement — rôle des MoR */}
+      <div className="flex items-start gap-3 bg-slate-50 border border-slate-200 rounded-2xl p-4 mt-4">
+        <ShieldCheck className="h-4 w-4 text-slate-500 shrink-0 mt-0.5" />
+        <div className="text-sm text-slate-600 space-y-2">
+          <p>
+            <strong className="text-slate-800">À propos des justificatifs de paiement :</strong>{' '}
+            lors de tout achat dans Kreyolang (abonnement Premium ou gemmes), la transaction
+            est juridiquement réalisée par <strong>Apple</strong> (App Store) ou{' '}
+            <strong>Google</strong> (Google Play) en qualité de <em>Merchant of Record</em>,
+            assistés techniquement par <strong>RevenueCat</strong> (sous-traitant au sens du RGPD).
+            Ces intermédiaires émettent votre reçu, collectent la TVA et conservent les
+            justificatifs comptables conformément à leurs propres obligations légales.
+          </p>
+          <p>
+            Pour toute demande concernant une transaction d'achat, contactez directement{' '}
+            <a href="https://support.apple.com/billing" target="_blank" rel="noopener noreferrer" className="text-purple-600 hover:underline font-semibold">
+              le Support Apple
+            </a>
+            {' '}ou{' '}
+            <a href="https://support.google.com/googleplay" target="_blank" rel="noopener noreferrer" className="text-purple-600 hover:underline font-semibold">
+              le Support Google Play
+            </a>
+            {' '}selon la plateforme d'achat.
+          </p>
+        </div>
       </div>
     </Article>
 
