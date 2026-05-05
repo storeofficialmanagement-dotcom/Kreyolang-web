@@ -120,7 +120,7 @@ const DeleteAccount = () => (
           </thead>
           <tbody>
             <DataRow
-              category="Profil (prénom, nom, e-mail, téléphone, avatar, pseudo)"
+              category="Profil (prénom, nom, e-mail, avatar, pseudo)"
               deleted={true}
               duration="Immédiat"
               retained="—"

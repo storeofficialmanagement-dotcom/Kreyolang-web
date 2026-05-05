@@ -35,7 +35,7 @@ const Table = ({ headers, rows }) => (
 );
 
 const Confidentialite = () => (
-  <LegalPage title="Politique de Confidentialité" lastUpdated="Avril 2026">
+  <LegalPage title="Politique de Confidentialité" lastUpdated="Mai 2026">
 
     {/* Préambule */}
     <Callout color="indigo">
@@ -82,14 +82,7 @@ const Confidentialite = () => (
         <li>Adresse email</li>
       </ul>
 
-      <SubTitle>2.2 Données de contact</SubTitle>
-      <p>
-        Numéro de téléphone — collecté <strong>uniquement si fourni volontairement</strong> par
-        l'utilisateur lors de la configuration du profil. Ce champ n'est pas obligatoire à
-        l'inscription.
-      </p>
-
-      <SubTitle>2.3 Données de progression</SubTitle>
+      <SubTitle>2.2 Données de progression</SubTitle>
       <ul className="list-disc list-inside space-y-1 ml-2">
         <li>Points d'expérience (XP) et Gemmes</li>
         <li>Niveau de ligue et classement</li>
@@ -98,7 +91,7 @@ const Confidentialite = () => (
         <li>Préférences linguistiques et unités actives</li>
       </ul>
 
-      <SubTitle>2.4 Données techniques et identifiants</SubTitle>
+      <SubTitle>2.3 Données techniques et identifiants</SubTitle>
       <ul className="list-disc list-inside space-y-1 ml-2">
         <li>Identifiant utilisateur unique (UUID généré par Supabase)</li>
         <li>Adresse IP (anonymisée automatiquement après 30 jours)</li>
@@ -107,7 +100,7 @@ const Confidentialite = () => (
         <li>Logs de session et rapports d'erreurs anonymisés</li>
       </ul>
 
-      <SubTitle>2.5 Données de paiement</SubTitle>
+      <SubTitle>2.4 Données de paiement</SubTitle>
       <p>
         Les coordonnées bancaires sont <strong>traitées exclusivement</strong> par Apple, Google
         ou Stripe et ne sont <strong>jamais transmises ni stockées</strong> par Kreyolang sur ses
