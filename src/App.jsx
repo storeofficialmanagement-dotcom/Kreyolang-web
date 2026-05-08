@@ -5,6 +5,7 @@ import Conditions from './pages/Conditions';
 import Confidentialite from './pages/Confidentialite';
 import MentionsLegales from './pages/MentionsLegales';
 import DeleteAccount from './pages/DeleteAccount';
+import Support from './pages/Support';
 import { LanguageProvider } from './context/LanguageContext';
 
 const App = () => (
@@ -15,6 +16,7 @@ const App = () => (
       <Route path="/confidentialite" element={<Confidentialite />} />
       <Route path="/mentions-legales" element={<MentionsLegales />} />
       <Route path="/delete-account" element={<DeleteAccount />} />
+      <Route path="/support" element={<Support />} />
     </Routes>
   </LanguageProvider>
 );
