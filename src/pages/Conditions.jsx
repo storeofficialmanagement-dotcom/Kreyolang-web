@@ -224,11 +224,36 @@ const Conditions = () => (
 
     {/* ─── Article 7 ─── */}
     <Article title="Article 7 — Médiation de la consommation">
+      <SubTitle>7.1 Litiges liés aux achats via App Store ou Google Play</SubTitle>
       <p>
-        Conformément à l'article <strong>L616-1</strong> du Code de la consommation, Kreyolang
-        propose un dispositif de médiation de la consommation. En cas de litige non résolu à
-        l'amiable dans un délai de <strong>30 jours</strong> suivant votre réclamation adressée
-        à{' '}
+        Pour les abonnements souscrits via l'<strong>App Store (Apple)</strong> ou le{' '}
+        <strong>Google Play Store</strong>, Apple et Google agissent en qualité de{' '}
+        <em>Merchant of Record</em> : le contrat de vente est conclu directement entre vous et
+        Apple ou Google. Les litiges relatifs à la facturation, aux remboursements ou aux
+        transactions sont traités par leurs propres services :
+      </p>
+      <ul className="list-disc list-inside space-y-1 ml-2 mt-1">
+        <li>
+          <strong>Apple :</strong>{' '}
+          <a href="https://reportaproblem.apple.com" target="_blank" rel="noopener noreferrer" className="text-purple-600 hover:underline">
+            reportaproblem.apple.com
+          </a>
+        </li>
+        <li>
+          <strong>Google :</strong>{' '}
+          <a href="https://play.google.com/store/account/subscriptions" target="_blank" rel="noopener noreferrer" className="text-purple-600 hover:underline">
+            play.google.com → Abonnements
+          </a>
+        </li>
+      </ul>
+
+      <SubTitle>7.2 Litiges liés au service ou aux achats via le site web</SubTitle>
+      <p>
+        Conformément à l'article <strong>L616-1</strong> du Code de la consommation, pour tout
+        litige relatif au service Kreyolang (accès au contenu, compte, données personnelles) ou
+        aux achats effectués sur <strong>www.kreyolang.com</strong> (via Stripe), en cas de
+        défaut de résolution amiable dans un délai de <strong>30 jours</strong> suivant votre
+        réclamation adressée à{' '}
         <a href="mailto:contact@kreyolang.com" className="text-purple-600 hover:underline font-semibold">
           contact@kreyolang.com
         </a>
