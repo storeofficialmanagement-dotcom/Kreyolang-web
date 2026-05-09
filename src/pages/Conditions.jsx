@@ -269,12 +269,7 @@ const Conditions = () => (
         </a>
       </p>
       <p className="mt-2">
-        La médiation est entièrement <strong>gratuite pour le consommateur</strong>. Vous pouvez
-        également accéder à la plateforme européenne de règlement en ligne des litiges (RLL) :{' '}
-        <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener noreferrer" className="text-purple-600 hover:underline">
-          ec.europa.eu/consumers/odr
-        </a>
-        .
+        La médiation est entièrement <strong>gratuite pour le consommateur</strong>.
       </p>
     </Article>
 
