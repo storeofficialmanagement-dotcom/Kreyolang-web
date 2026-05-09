@@ -4,15 +4,36 @@
     <loc>https://www.kreyolang.com/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <lastmod>2026-05-09</lastmod>
+  </url>
+  <url>
+    <loc>https://www.kreyolang.com/support</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2026-05-09</lastmod>
   </url>
   <url>
     <loc>https://www.kreyolang.com/conditions</loc>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
+    <lastmod>2026-05-09</lastmod>
   </url>
   <url>
     <loc>https://www.kreyolang.com/confidentialite</loc>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
+    <lastmod>2026-05-09</lastmod>
+  </url>
+  <url>
+    <loc>https://www.kreyolang.com/mentions-legales</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+    <lastmod>2026-05-09</lastmod>
+  </url>
+  <url>
+    <loc>https://www.kreyolang.com/delete-account</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+    <lastmod>2026-05-09</lastmod>
   </url>
 </urlset>
