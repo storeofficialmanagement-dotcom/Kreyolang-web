@@ -27,25 +27,78 @@
     <meta name="twitter:description" content="L'application gamifiée pour apprendre les langues créoles et africaines. Leçons courtes, XP, ligues, streaks et thème pirate." />
     <meta name="twitter:image" content="https://www.kreyolang.com/mascot.webp" />
 
-    <!-- Schema.org JSON-LD -->
+    <!-- Schema.org JSON-LD — Application -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "MobileApplication",
       "name": "Kreyolang",
+      "alternateName": "Kreyolang — Apprenez le Créole",
       "operatingSystem": "iOS, Android",
       "applicationCategory": "EducationalApplication",
-      "description": "Application gamifiée pour apprendre les langues créoles et les langues d'Afrique.",
+      "description": "Application mobile gamifiée pour apprendre les langues créoles (martiniquais, haïtien, guadeloupéen, réunionnais) et les langues d'Afrique. Leçons courtes, XP, ligues, streaks et thème pirate.",
       "url": "https://www.kreyolang.com",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "EUR"
-      },
+      "inLanguage": ["fr", "en"],
+      "featureList": [
+        "Leçons gamifiées",
+        "Système de points XP",
+        "Ligues et classements",
+        "Streaks quotidiens",
+        "Exercices interactifs",
+        "Dictionnaire multilingue",
+        "Contenu culturel",
+        "Mode hors-ligne"
+      ],
+      "offers": [
+        {
+          "@type": "Offer",
+          "name": "Gratuit",
+          "price": "0",
+          "priceCurrency": "EUR"
+        },
+        {
+          "@type": "Offer",
+          "name": "Premium",
+          "price": "9.99",
+          "priceCurrency": "EUR",
+          "billingIncrement": "P1M"
+        }
+      ],
       "author": {
-        "@type": "Organization",
-        "name": "Kreyolang SAS",
+        "@type": "Person",
+        "name": "Christopher Jeanne",
         "url": "https://www.kreyolang.com"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "CMJ Group",
+        "url": "https://www.kreyolang.com",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.kreyolang.com/favicon.png"
+        }
+      },
+      "image": "https://www.kreyolang.com/mascot.webp",
+      "screenshot": "https://www.kreyolang.com/mascot.webp",
+      "countriesSupported": "FR, GP, MQ, RE, HT, BE, CA"
+    }
+    </script>
+
+    <!-- Schema.org JSON-LD — WebSite (SearchAction) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Kreyolang",
+      "url": "https://www.kreyolang.com",
+      "description": "Application pour apprendre les langues créoles et africaines",
+      "publisher": {
+        "@type": "Organization",
+        "name": "CMJ Group",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.kreyolang.com/favicon.png"
+        }
       }
     }
     </script>
