@@ -63,6 +63,17 @@
 - SIRET : 879 333 664 00040
 - Le SIREN suffit pour les pages légales web (conforme LCEN)
 
+## ⚠️ Action en attente — À rappeler en début de session
+
+### Inscription CM2C (médiateur de la consommation) — OBLIGATOIRE légalement
+- Les CGU mentionnent CM2C comme médiateur (art. L616-1 Code de la consommation)
+- **Christopher doit s'inscrire ici : https://www.cm2c.net/inscription-professionnel.php**
+- Coût : ~48 € TTC pour 3 ans
+- Sans cette inscription, la clause est dans les CGU mais pas juridiquement opposable
+- Amende en cas de non-conformité : 3 000 € (EI)
+
+---
+
 ## Google Search Console
 - Propriété URL : `https://www.kreyolang.com` ✅ validée
 - Propriété Domaine : `kreyolang.com` ✅ validée
