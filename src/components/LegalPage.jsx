@@ -89,11 +89,12 @@ const LegalPage = ({ title, lastUpdated, badge = 'Document légal', children }) 
     <footer className="border-t border-slate-100 bg-slate-50 py-8 mt-8">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-slate-500">
         <span>© 2026 Kreyolang.com — Tous droits réservés</span>
-        <div className="flex gap-5">
+        <div className="flex flex-wrap gap-5">
           <Link to="/conditions"      className="hover:text-purple-600 transition-colors">CGU / CGV</Link>
           <Link to="/confidentialite" className="hover:text-purple-600 transition-colors">Confidentialité</Link>
+          <Link to="/mentions-legales" className="hover:text-purple-600 transition-colors">Mentions légales</Link>
           <Link to="/delete-account"  className="hover:text-purple-600 transition-colors">Supprimer mon compte</Link>
-          <Link to="/support"  className="hover:text-purple-600 transition-colors">Support</Link>
+          <Link to="/support"         className="hover:text-purple-600 transition-colors">Support</Link>
           <a href="mailto:contact@kreyolang.com" className="hover:text-purple-600 transition-colors">
             contact@kreyolang.com
           </a>

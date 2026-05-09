@@ -404,17 +404,15 @@ const Support = () => {
       </section>
 
       {/* ── Footer ── */}
-      <footer className="border-t border-slate-100 bg-white py-8">
+      <footer className="border-t border-slate-100 bg-slate-50 py-8 mt-8">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-slate-500">
-          <div className="flex items-center gap-2">
-            <Anchor className="h-4 w-4 text-amber-500" />
-            <span className="font-extrabold text-slate-700">Kreyolang</span>
-            <span>— © 2026 Tous droits réservés</span>
-          </div>
-          <div className="flex gap-5 text-xs">
-            <Link to="/conditions"      className="hover:text-purple-600 transition-colors">CGU / CGV</Link>
-            <Link to="/confidentialite" className="hover:text-purple-600 transition-colors">Confidentialité</Link>
+          <span>© 2026 Kreyolang.com — Tous droits réservés</span>
+          <div className="flex flex-wrap gap-5">
+            <Link to="/conditions"       className="hover:text-purple-600 transition-colors">CGU / CGV</Link>
+            <Link to="/confidentialite"  className="hover:text-purple-600 transition-colors">Confidentialité</Link>
             <Link to="/mentions-legales" className="hover:text-purple-600 transition-colors">Mentions légales</Link>
+            <Link to="/delete-account"   className="hover:text-purple-600 transition-colors">Supprimer mon compte</Link>
+            <a href="mailto:contact@kreyolang.com" className="hover:text-purple-600 transition-colors">contact@kreyolang.com</a>
           </div>
         </div>
       </footer>

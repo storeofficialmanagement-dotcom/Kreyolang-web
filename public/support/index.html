@@ -53,10 +53,11 @@
     .useful-links { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 12px; margin-top: 16px; }
     .useful-links a { display: block; background: #fff; border: 1px solid #e2e8f0; border-radius: 14px; padding: 16px; text-align: center; font-size: 0.8rem; font-weight: 700; color: #475569; text-decoration: none; }
     .useful-links a:hover { border-color: #a78bfa; color: #7c3aed; }
-    footer { border-top: 1px solid #e2e8f0; background: #fff; padding: 28px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; font-size: 0.8rem; color: #94a3b8; }
-    footer nav { display: flex; flex-wrap: wrap; gap: 16px; }
+    footer { border-top: 1px solid #e2e8f0; background: #f8fafc; padding: 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 24px; font-size: 0.8rem; color: #94a3b8; }
+    footer nav { display: flex; flex-wrap: wrap; gap: 8px 20px; }
     footer nav a { color: #94a3b8; text-decoration: none; }
     footer nav a:hover { color: #7c3aed; }
+    footer nav a.active { color: #7c3aed; font-weight: 700; }
     @media (max-width: 600px) { .delays { grid-template-columns: 1fr; } }
   </style>
 </head>
@@ -212,11 +213,13 @@
   </div>
 
   <footer>
-    <span>⚓ Kreyolang — © 2026 Tous droits réservés — SIREN : 879 333 664</span>
+    <span>© 2026 Kreyolang.com — Tous droits réservés</span>
     <nav>
       <a href="/conditions">CGU / CGV</a>
       <a href="/confidentialite">Confidentialité</a>
       <a href="/mentions-legales">Mentions légales</a>
+      <a href="/delete-account">Supprimer mon compte</a>
+      <a href="/support" class="active">Support</a>
       <a href="mailto:contact@kreyolang.com">contact@kreyolang.com</a>
     </nav>
   </footer>
