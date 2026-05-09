@@ -4,7 +4,7 @@ import LegalPage, { Article, SubTitle, Callout } from '../components/LegalPage';
 const Conditions = () => (
   <LegalPage
     title="Conditions Générales d'Utilisation et de Vente"
-    lastUpdated="Février 2026"
+    lastUpdated="Mai 2026"
   >
 
     {/* Préambule */}
@@ -122,7 +122,7 @@ const Conditions = () => (
         partiel n'est accordé pour la période restante, sauf dispositions légales applicables.
       </p>
 
-      <SubTitle>3.5 Politique de remboursement</SubTitle>
+      <SubTitle>3.5 Politique de remboursement et droit de rétractation</SubTitle>
       <p>
         Les demandes de remboursement pour les achats effectués via l'App Store ou Google Play sont
         soumises aux politiques de remboursement respectives d'Apple et de Google. Pour les achats
@@ -130,6 +130,16 @@ const Conditions = () => (
         <strong>contact@kreyolang.com</strong> dans un délai de <strong>14 jours</strong> suivant
         la date d'achat, conformément au droit de rétractation légal (art. L221-18 du Code de la
         consommation).
+      </p>
+      <p className="mt-2">
+        Toutefois, conformément à l'article <strong>L221-28 12°</strong> du Code de la
+        consommation, le droit de rétractation ne peut être exercé pour les contenus numériques
+        non fournis sur un support matériel (accès Premium immédiat, leçons téléchargées hors
+        connexion) dont l'exécution a commencé avec l'accord préalable exprès du consommateur et
+        son renoncement exprès à son droit de rétractation. En accédant immédiatement au contenu
+        Premium Kreyolang après un achat sur <strong>www.kreyolang.com</strong>, l'utilisateur
+        reconnaît expressément avoir accepté l'exécution immédiate du contrat et avoir renoncé à
+        son droit de rétractation pour cette transaction.
       </p>
     </Article>
 
@@ -213,7 +223,38 @@ const Conditions = () => (
     </Article>
 
     {/* ─── Article 7 ─── */}
-    <Article title="Article 7 — Droit applicable et juridiction compétente">
+    <Article title="Article 7 — Médiation de la consommation">
+      <p>
+        Conformément à l'article <strong>L616-1</strong> du Code de la consommation, Kreyolang
+        propose un dispositif de médiation de la consommation. En cas de litige non résolu à
+        l'amiable dans un délai de <strong>30 jours</strong> suivant votre réclamation adressée
+        à{' '}
+        <a href="mailto:contact@kreyolang.com" className="text-purple-600 hover:underline font-semibold">
+          contact@kreyolang.com
+        </a>
+        , vous pouvez recourir gratuitement au médiateur suivant :
+      </p>
+      <p className="mt-3 font-semibold text-slate-800">
+        CM2C — Centre de Médiation de la Consommation de Conciliateurs de Justice
+      </p>
+      <p>
+        Site :{' '}
+        <a href="https://www.cm2c.net" target="_blank" rel="noopener noreferrer" className="text-purple-600 hover:underline">
+          www.cm2c.net
+        </a>
+      </p>
+      <p className="mt-2">
+        La médiation est entièrement <strong>gratuite pour le consommateur</strong>. Vous pouvez
+        également accéder à la plateforme européenne de règlement en ligne des litiges (RLL) :{' '}
+        <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener noreferrer" className="text-purple-600 hover:underline">
+          ec.europa.eu/consumers/odr
+        </a>
+        .
+      </p>
+    </Article>
+
+    {/* ─── Article 8 ─── */}
+    <Article title="Article 8 — Droit applicable et juridiction compétente">
       <p>
         Les présentes CGU/CGV sont soumises au <strong>droit français</strong>. En cas de litige
         relatif à leur interprétation ou leur exécution, et à défaut de résolution amiable dans
