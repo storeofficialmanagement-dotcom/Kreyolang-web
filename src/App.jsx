@@ -12,6 +12,8 @@ const App = () => (
   <LanguageProvider>
     <Routes>
       <Route path="/" element={<LandingPage />} />
+      <Route path="/en" element={<LandingPage />} />
+      <Route path="/en/" element={<LandingPage />} />
       <Route path="/conditions" element={<Conditions />} />
       <Route path="/confidentialite" element={<Confidentialite />} />
       <Route path="/mentions-legales" element={<MentionsLegales />} />

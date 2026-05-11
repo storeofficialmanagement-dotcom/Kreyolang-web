@@ -55,7 +55,20 @@ const Navbar = ({ onCTA }) => {
         <div className="flex items-center gap-3">
           <button
             className="flex items-center gap-2 font-bold text-slate-600 hover:bg-slate-100 py-2 px-3 rounded-2xl transition-colors text-sm"
-            onClick={() => setLang(lang === 'FR' ? 'EN' : 'FR')}
+            onClick={() => {
+              const next = lang === 'FR' ? 'EN' : 'FR';
+              setLang(next);
+              // Refléter la langue dans l'URL pour SEO + partage de lien
+              if (typeof window !== 'undefined') {
+                const path = window.location.pathname;
+                if (next === 'EN' && !path.startsWith('/en')) {
+                  window.location.assign('/en/');
+                } else if (next === 'FR' && path.startsWith('/en')) {
+                  window.location.assign('/');
+                }
+              }
+            }}
+            aria-label={lang === 'FR' ? 'Switch to English' : 'Passer en français'}
           >
             <Globe className="h-4 w-4" />
             <span>{lang}</span>
