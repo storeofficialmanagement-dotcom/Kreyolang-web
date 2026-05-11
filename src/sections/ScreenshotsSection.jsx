@@ -5,20 +5,20 @@ import { useLanguage } from '../context/LanguageContext';
 import SectionTag from '../components/SectionTag';
 
 const screensFR = [
-  { label: 'Carte des leçons',      src: '/screenshots/map.png' },
-  { label: 'Exercices visuels',     src: '/screenshots/quiz7.png' },
-  { label: 'Classement Ligues',     src: '/screenshots/league.png' },
-  { label: 'Culture & Traditions',  src: '/screenshots/culture.png' },
-  { label: 'Profil & Statistiques', src: '/screenshots/streak.png' },
-  { label: 'Atelier de langue',     src: '/screenshots/atelier.png' },
+  { label: 'Carte des leçons',      src: '/screenshots/fr/map.png' },
+  { label: 'Exercices visuels',     src: '/screenshots/fr/quiz7.png' },
+  { label: 'Classement Ligues',     src: '/screenshots/fr/league.png' },
+  { label: 'Culture & Traditions',  src: '/screenshots/fr/culture.png' },
+  { label: 'Profil & Statistiques', src: '/screenshots/fr/streak.png' },
+  { label: 'Atelier de langue',     src: '/screenshots/fr/atelier.png' },
 ];
 const screensEN = [
-  { label: 'Lesson map',        src: '/screenshots/map.png' },
-  { label: 'Visual exercises',  src: '/screenshots/quiz7.png' },
-  { label: 'League rankings',   src: '/screenshots/league.png' },
-  { label: 'Culture & Heritage',src: '/screenshots/culture.png' },
-  { label: 'Profile & Stats',   src: '/screenshots/streak.png' },
-  { label: 'Language Workshop', src: '/screenshots/atelier.png' },
+  { label: 'Lesson map',        src: '/screenshots/en/map.png' },
+  { label: 'Visual exercises',  src: '/screenshots/en/quiz7.png' },
+  { label: 'League rankings',   src: '/screenshots/en/league.png' },
+  { label: 'Culture & Heritage',src: '/screenshots/en/culture.png' },
+  { label: 'Profile & Stats',   src: '/screenshots/en/streak.png' },
+  { label: 'Language Workshop', src: '/screenshots/en/atelier.png' },
 ];
 
 const txtFR = { tag: "L'application", h: "Découvrez l'expérience", sub: "Voici à quoi ressemble Kreyolang — pas une promesse, une réalité." };

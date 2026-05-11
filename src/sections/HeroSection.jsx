@@ -88,7 +88,7 @@ const HeroSection = ({ onCTA }) => {
           <div className="relative z-10 drop-shadow-xl">
             <IPhoneMockup>
               <img
-                src="/screenshots/map.png"
+                src={lang === 'EN' ? '/screenshots/en/map.png' : '/screenshots/fr/map.png'}
                 alt="Kreyolang app"
                 className="w-full h-full object-cover object-top"
                 draggable={false}
