@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="canonical" href="https://kreyolang.com/" />
+  <link rel="alternate" hreflang="fr" href="https://kreyolang.com/" />
+  <link rel="alternate" hreflang="en" href="https://kreyolang.com/en/" />
+  <link rel="alternate" hreflang="x-default" href="https://kreyolang.com/" />
+
+  <title>Kreyolang — Learn Creole and African Languages</title>
+  <meta name="description" content="Kreyolang is the gamified app to learn Creole and African languages. Lessons, XP, leagues, streaks. Embark on a journey of cultural reconnection." />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://kreyolang.com/en/" />
+  <meta property="og:title" content="Kreyolang — Learn Creole and African Languages" />
+  <meta property="og:description" content="The gamified app to learn Creole and African languages. Short lessons, XP, leagues, streaks, and a pirate theme. Coming soon to iOS and Android." />
+  <meta property="og:image" content="https://kreyolang.com/mascot.webp" />
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="/favicon.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon.png" />
+
+  <script>
+    // Persist EN language preference, then send the user to the main React app.
+    // The React landing reads this on boot and renders in English.
+    try { localStorage.setItem('kreyolang_lang', 'EN'); } catch (e) {}
+    window.location.replace('/');
+  </script>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, sans-serif; background: #f8fafc; color: #1e293b; margin: 0; padding: 40px 24px; text-align: center; }
+    a { color: #7c3aed; text-decoration: none; font-weight: 700; }
+  </style>
+</head>
+<body>
+  <h1 style="font-size:1.5rem;margin-bottom:8px;">Kreyolang — Learn Creole &amp; African Languages</h1>
+  <p style="color:#64748b;margin-bottom:24px;">Redirecting you to the English experience…</p>
+  <p><a href="/">Continue to Kreyolang →</a></p>
+  <noscript>
+    <p>Please <a href="/">click here to continue</a>. JavaScript is required to redirect automatically.</p>
+  </noscript>
+</body>
+</html>

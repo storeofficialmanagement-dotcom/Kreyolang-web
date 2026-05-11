@@ -4,6 +4,11 @@ const LanguageContext = createContext({ lang: 'FR', setLang: () => {} });
 
 // Detect initial language
 const detectLanguage = () => {
+  // 0. URL path takes precedence (/en/* → EN)
+  if (typeof window !== 'undefined' && window.location.pathname.startsWith('/en')) {
+    return 'EN';
+  }
+
   // 1. Saved preference
   const saved = localStorage.getItem('kreyolang_lang');
   if (saved === 'EN' || saved === 'FR') return saved;
