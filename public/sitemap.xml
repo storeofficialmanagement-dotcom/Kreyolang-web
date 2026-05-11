@@ -1,39 +1,107 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
   <url>
     <loc>https://kreyolang.com/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <lastmod>2026-05-11</lastmod>
   </url>
+
   <url>
     <loc>https://kreyolang.com/support/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kreyolang.com/support/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://kreyolang.com/en/support/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kreyolang.com/support/" />
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <lastmod>2026-05-11</lastmod>
   </url>
   <url>
+    <loc>https://kreyolang.com/en/support/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kreyolang.com/support/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://kreyolang.com/en/support/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kreyolang.com/support/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-05-11</lastmod>
+  </url>
+
+  <url>
     <loc>https://kreyolang.com/conditions/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kreyolang.com/conditions/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://kreyolang.com/en/conditions/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kreyolang.com/conditions/" />
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
     <lastmod>2026-05-11</lastmod>
   </url>
+  <url>
+    <loc>https://kreyolang.com/en/conditions/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kreyolang.com/conditions/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://kreyolang.com/en/conditions/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kreyolang.com/conditions/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+    <lastmod>2026-05-11</lastmod>
+  </url>
+
   <url>
     <loc>https://kreyolang.com/confidentialite/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kreyolang.com/confidentialite/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://kreyolang.com/en/confidentialite/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kreyolang.com/confidentialite/" />
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
     <lastmod>2026-05-11</lastmod>
   </url>
+  <url>
+    <loc>https://kreyolang.com/en/confidentialite/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kreyolang.com/confidentialite/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://kreyolang.com/en/confidentialite/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kreyolang.com/confidentialite/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+    <lastmod>2026-05-11</lastmod>
+  </url>
+
   <url>
     <loc>https://kreyolang.com/mentions-legales/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kreyolang.com/mentions-legales/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://kreyolang.com/en/mentions-legales/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kreyolang.com/mentions-legales/" />
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
     <lastmod>2026-05-11</lastmod>
   </url>
   <url>
-    <loc>https://kreyolang.com/delete-account/</loc>
+    <loc>https://kreyolang.com/en/mentions-legales/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kreyolang.com/mentions-legales/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://kreyolang.com/en/mentions-legales/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kreyolang.com/mentions-legales/" />
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
     <lastmod>2026-05-11</lastmod>
   </url>
+
+  <url>
+    <loc>https://kreyolang.com/delete-account/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kreyolang.com/delete-account/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://kreyolang.com/en/delete-account/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kreyolang.com/delete-account/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+    <lastmod>2026-05-11</lastmod>
+  </url>
+  <url>
+    <loc>https://kreyolang.com/en/delete-account/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kreyolang.com/delete-account/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://kreyolang.com/en/delete-account/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kreyolang.com/delete-account/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+    <lastmod>2026-05-11</lastmod>
+  </url>
+
 </urlset>
