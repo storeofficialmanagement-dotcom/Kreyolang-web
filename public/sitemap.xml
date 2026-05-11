@@ -1,39 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://www.kreyolang.com/</loc>
+    <loc>https://kreyolang.com/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-    <lastmod>2026-05-09</lastmod>
+    <lastmod>2026-05-11</lastmod>
   </url>
   <url>
-    <loc>https://www.kreyolang.com/support</loc>
+    <loc>https://kreyolang.com/support/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <lastmod>2026-05-09</lastmod>
+    <lastmod>2026-05-11</lastmod>
   </url>
   <url>
-    <loc>https://www.kreyolang.com/conditions</loc>
+    <loc>https://kreyolang.com/conditions/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
-    <lastmod>2026-05-09</lastmod>
+    <lastmod>2026-05-11</lastmod>
   </url>
   <url>
-    <loc>https://www.kreyolang.com/confidentialite</loc>
+    <loc>https://kreyolang.com/confidentialite/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
-    <lastmod>2026-05-09</lastmod>
+    <lastmod>2026-05-11</lastmod>
   </url>
   <url>
-    <loc>https://www.kreyolang.com/mentions-legales</loc>
+    <loc>https://kreyolang.com/mentions-legales/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
-    <lastmod>2026-05-09</lastmod>
+    <lastmod>2026-05-11</lastmod>
   </url>
   <url>
-    <loc>https://www.kreyolang.com/delete-account</loc>
+    <loc>https://kreyolang.com/delete-account/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
-    <lastmod>2026-05-09</lastmod>
+    <lastmod>2026-05-11</lastmod>
   </url>
 </urlset>
