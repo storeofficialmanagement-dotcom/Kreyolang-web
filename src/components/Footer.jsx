@@ -105,12 +105,17 @@ const Footer = () => {
               </svg>
               <span className="text-[10px] font-bold text-white">App Store</span>
             </a>
-            <div className="flex items-center gap-2 bg-slate-800 rounded-lg px-3 py-2 opacity-50 cursor-not-allowed">
+            <a
+              href="https://play.google.com/store/apps/details?id=com.kreyolangapp.kreyolang&utm_source=emea_Med"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 bg-slate-800 hover:bg-slate-700 rounded-lg px-3 py-2 transition-colors"
+            >
               <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none">
                 <path d="M3 20.5V3.5C3 2.9 3.7 2.6 4.2 3L20.2 12L4.2 21C3.7 21.4 3 21.1 3 20.5Z" fill="#34D399" />
               </svg>
               <span className="text-[10px] font-bold text-white">Google Play</span>
-            </div>
+            </a>
           </div>
         </div>
       </div>

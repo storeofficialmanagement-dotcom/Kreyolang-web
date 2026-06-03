@@ -98,16 +98,21 @@ const HeroSection = ({ onCTA }) => {
               </div>
             </a>
 
-            {/* Google Play — coming soon */}
-            <div className="flex items-center gap-2.5 bg-slate-100 text-slate-400 rounded-xl px-4 py-2.5 cursor-not-allowed border border-slate-200">
+            {/* Google Play — live */}
+            <a
+              href="https://play.google.com/store/apps/details?id=com.kreyolangapp.kreyolang&utm_source=emea_Med"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2.5 bg-black hover:bg-slate-800 text-white rounded-xl px-4 py-2.5 transition-colors shadow-sm"
+            >
               <svg viewBox="0 0 24 24" className="h-5 w-5 shrink-0" fill="none">
-                <path d="M3 20.5V3.5C3 2.9 3.7 2.6 4.2 3L20.2 12L4.2 21C3.7 21.4 3 21.1 3 20.5Z" fill="currentColor" />
+                <path d="M3 20.5V3.5C3 2.9 3.7 2.6 4.2 3L20.2 12L4.2 21C3.7 21.4 3 21.1 3 20.5Z" fill="#34D399" />
               </svg>
               <div className="text-left">
-                <div className="text-[9px] leading-none opacity-70">{lang === 'EN' ? 'Coming soon on' : 'Bientôt sur'}</div>
+                <div className="text-[9px] leading-none opacity-70">{lang === 'EN' ? 'Get it on' : 'Disponible sur'}</div>
                 <div className="text-sm font-bold leading-tight">Google Play</div>
               </div>
-            </div>
+            </a>
           </div>
         </div>
 
