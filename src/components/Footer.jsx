@@ -76,7 +76,7 @@ const Footer = () => {
         <div>
           <h3 className="text-white font-bold mb-4 uppercase tracking-wider text-sm">{t.follow}</h3>
           <div className="flex gap-4">
-            <a href="#" className="hover:text-amber-400 transition-colors" aria-label="Facebook">
+            <a href="https://www.facebook.com/Kreyolang" className="hover:text-amber-400 transition-colors" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
               <Facebook className="h-5 w-5" />
             </a>
             <a href="#" className="hover:text-amber-400 transition-colors" aria-label="Twitter">
