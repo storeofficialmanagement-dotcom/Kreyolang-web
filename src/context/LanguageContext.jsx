@@ -1,6 +1,5 @@
-import React, { createContext, useContext, useState, useEffect } from 'react';
-
-const LanguageContext = createContext({ lang: 'FR', setLang: () => {} });
+import React, { useState, useEffect } from 'react';
+import { LanguageContext } from './language';
 
 // Detect initial language
 const detectLanguage = () => {
@@ -21,12 +20,9 @@ const detectLanguage = () => {
 };
 
 export const LanguageProvider = ({ children }) => {
-  const [lang, setLangState] = useState('FR');
+  const [lang, setLangState] = useState(detectLanguage);
 
   useEffect(() => {
-    const detected = detectLanguage();
-    setLangState(detected);
-
     // IP-based detection as async fallback (only if no saved preference)
     const saved = localStorage.getItem('kreyolang_lang');
     if (!saved) {
@@ -58,5 +54,3 @@ export const LanguageProvider = ({ children }) => {
     </LanguageContext.Provider>
   );
 };
-
-export const useLanguage = () => useContext(LanguageContext);

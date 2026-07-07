@@ -1,7 +1,7 @@
 import React from 'react';
 import { Download, Globe, Gamepad2, Trophy } from 'lucide-react';
 import useScrollAnimation from '../hooks/useScrollAnimation';
-import { useLanguage } from '../context/LanguageContext';
+import { useLanguage } from '../context/language';
 import SectionTag from '../components/SectionTag';
 
 const stepsFR = [

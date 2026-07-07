@@ -115,7 +115,9 @@ const RESPONSE_TIMES = [
    COMPOSANTS
 ───────────────────────────────────────── */
 
-const TopicCard = ({ icon: Icon, color, ring, title, desc }) => (
+const TopicCard = ({ icon, color, ring, title, desc }) => {
+  const Icon = icon;
+  return (
   <button
     onClick={() => {
       document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
@@ -130,7 +132,8 @@ const TopicCard = ({ icon: Icon, color, ring, title, desc }) => (
     </p>
     <p className="text-xs text-slate-500 leading-relaxed">{desc}</p>
   </button>
-);
+  );
+};
 
 const FaqItem = ({ q, a, link }) => {
   const [open, setOpen] = useState(false);
@@ -340,13 +343,16 @@ const Support = () => {
 
         {/* Délais de réponse */}
         <div className="grid grid-cols-3 gap-3 mb-8">
-          {RESPONSE_TIMES.map(({ icon: Icon, color, label, time }, i) => (
+          {RESPONSE_TIMES.map(({ icon, color, label, time }, i) => {
+            const Icon = icon;
+            return (
             <div key={i} className="bg-white border border-slate-200 rounded-2xl p-4 text-center">
               <Icon className={`h-5 w-5 mx-auto mb-2 ${color}`} />
               <p className="text-[11px] text-slate-500 font-semibold leading-tight mb-1">{label}</p>
               <p className="text-sm font-extrabold text-slate-800">{time}</p>
             </div>
-          ))}
+            );
+          })}
         </div>
 
         {/* Objet suggéré selon le sujet */}
@@ -387,7 +393,9 @@ const Support = () => {
               { icon: BookOpen,  label: 'Conditions d\'utilisation', to: '/conditions' },
               { icon: Shield,    label: 'Confidentialité',          to: '/confidentialite' },
               { icon: Star,      label: 'Mentions légales',         to: '/mentions-legales' },
-            ].map(({ icon: Icon, label, to }, i) => (
+            ].map(({ icon, label, to }, i) => {
+              const Icon = icon;
+              return (
               <Link
                 key={i}
                 to={to}
@@ -398,7 +406,8 @@ const Support = () => {
                   {label}
                 </span>
               </Link>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Mail, ArrowRight } from 'lucide-react';
 import useScrollAnimation from '../hooks/useScrollAnimation';
-import { useLanguage } from '../context/LanguageContext';
+import { useLanguage } from '../context/language';
 
 const txtFR = {
   title: 'Restez informé',

@@ -7,7 +7,7 @@
 - Le backend/app mobile vit dans `~/Desktop/Kreyolang` — ce repo n'y touche jamais.
 
 ## Commandes
-- Vérifier : `npm run verify` (= build complet) — après chaque bloc de modifs ; échec = corriger avant de continuer, jamais empiler. (`npm run lint` : 6 erreurs préexistantes à apurer — cf. docs/TODO.md ; ne pas en ajouter.)
+- Vérifier : `npm run verify` (lint + build) — après chaque bloc de modifs ; échec = corriger avant de continuer, jamais empiler.
 - Lancer : `npm run dev` (port 5173).
 - `npm run build` inclut un post-script (`scripts/build-en-landing.mjs`) qui génère la landing EN — ne jamais le contourner.
 

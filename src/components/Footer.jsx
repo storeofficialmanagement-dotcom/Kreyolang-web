@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Anchor, Facebook, Twitter, Instagram } from 'lucide-react';
-import { useLanguage } from '../context/LanguageContext';
+import { useLanguage } from '../context/language';
 
 const txtFR = {
   tagline: "Apprenez le créole et les langues d'Afrique.\nDevenez un Amiral.",

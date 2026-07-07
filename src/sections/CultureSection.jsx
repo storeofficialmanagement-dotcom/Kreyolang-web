@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { BookOpen, Music, UtensilsCrossed, Scroll, Sparkles, Lock, Crown } from 'lucide-react';
 import { proverbs, history, music, cuisine, legends } from '../data/cultureData';
 import useScrollAnimation from '../hooks/useScrollAnimation';
-import { useLanguage } from '../context/LanguageContext';
+import { useLanguage } from '../context/language';
 import SectionTag from '../components/SectionTag';
 
 const tabsFR = [

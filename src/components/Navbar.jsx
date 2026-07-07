@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Globe, Menu, X } from 'lucide-react';
-import { useLanguage } from '../context/LanguageContext';
+import { useLanguage } from '../context/language';
 
 const navFR = [
   { label: 'Méthode',        href: '#methode' },

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Brain, Ear, Mic, Gamepad2, PenLine, Eye } from 'lucide-react';
 import useScrollAnimation from '../hooks/useScrollAnimation';
-import { useLanguage } from '../context/LanguageContext';
+import { useLanguage } from '../context/language';
 
 const highlightsFR = [
   { icon: <Brain className="h-7 w-7" />, title: 'Compréhension', desc: "Quiz, choix d'images, textes à trous — testez votre compréhension de multiples façons.", color: 'from-purple-500 to-indigo-600' },

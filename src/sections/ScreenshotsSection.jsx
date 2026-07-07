@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import IPhoneMockup from '../components/IPhoneMockup';
 import useScrollAnimation from '../hooks/useScrollAnimation';
-import { useLanguage } from '../context/LanguageContext';
+import { useLanguage } from '../context/language';
 import SectionTag from '../components/SectionTag';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
@@ -50,8 +50,13 @@ const ScreenshotsSection = () => {
     return () => window.removeEventListener('resize', update);
   }, []);
 
-  // Reset position when language changes
-  useEffect(() => { setCurrent(0); }, [lang]);
+  // Reset position when language changes (ajustement pendant le rendu — pattern React
+  // officiel, évite le setState synchrone dans un effet)
+  const [prevLang, setPrevLang] = useState(lang);
+  if (prevLang !== lang) {
+    setPrevLang(lang);
+    setCurrent(0);
+  }
 
   const maxIndex = Math.max(0, screens.length - perPage);
 

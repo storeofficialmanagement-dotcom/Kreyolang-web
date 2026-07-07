@@ -1,6 +1,6 @@
 import React from 'react';
 import IPhoneMockup from '../components/IPhoneMockup';
-import { useLanguage } from '../context/LanguageContext';
+import { useLanguage } from '../context/language';
 
 const txt = {
   FR: {

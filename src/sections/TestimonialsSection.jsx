@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Star, ChevronLeft, ChevronRight } from 'lucide-react';
 import useScrollAnimation from '../hooks/useScrollAnimation';
-import { useLanguage } from '../context/LanguageContext';
+import { useLanguage } from '../context/language';
 
 const testimonialsFR = [
   { name: 'Marie-Claire D.', city: 'Paris',          initials: 'MC', color: 'bg-purple-500', stars: 5, text: "Grâce à Kreyolang, je peux enfin parler créole avec ma grand-mère. Elle pleure de joie à chaque appel. Cette app m'a reconnectée à mes racines." },
