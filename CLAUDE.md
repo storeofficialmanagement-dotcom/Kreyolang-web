@@ -1,81 +1,32 @@
-# Kreyolang Web — Instructions pour Claude
+# Kreyolang Web — Instructions Claude Code
+<!-- v2.0 | 2026-07-07 | Réécriture MISSION v3. Ancien fichier : docs/archive/CLAUDE-2026-07-07.md -->
 
-## Stack technique
-- React 19 + Vite 7 + Tailwind CSS v4
-- React Router (client-side routing)
-- Déployé sur GitHub Pages → www.kreyolang.com
-- Domaine géré chez Infomaniak
+## Identité
+- Site vitrine **Vite 7 + React 19 + Tailwind CSS 4**, routing client react-router 7. **100 % JavaScript** (pas de TypeScript, pas de tests).
+- Déploiement : **GitHub Pages via GitHub Actions** (push sur `main` → build → deploy). Domaine `www.kreyolang.com` (DNS Infomaniak). PAS de Vercel, PAS de connexion Supabase (mentions textuelles seulement).
+- Le backend/app mobile vit dans `~/Desktop/Kreyolang` — ce repo n'y touche jamais.
 
-## Règles obligatoires à chaque création de nouvelle page
+## Commandes
+- Vérifier : `npm run verify` (= build complet) — après chaque bloc de modifs ; échec = corriger avant de continuer, jamais empiler. (`npm run lint` : 6 erreurs préexistantes à apurer — cf. docs/TODO.md ; ne pas en ajouter.)
+- Lancer : `npm run dev` (port 5173).
+- `npm run build` inclut un post-script (`scripts/build-en-landing.mjs`) qui génère la landing EN — ne jamais le contourner.
 
-### ✅ 1. Créer la page React (JSX)
-- Fichier dans `src/pages/NomPage.jsx`
-- Ajouter la route dans `src/App.jsx`
+## Gates [PERMANENT]
+- Push sur `main` = déploiement en production immédiat → jamais pousser sans `npm run verify` vert + accord de Christopher.
+- Seule adresse email réelle : `contact@kreyolang.com` — ne JAMAIS inventer d'adresse (privacy@, legal@…).
+- Pages légales : ne modifier que sur instruction explicite ; identité = Christopher Jeanne EI (CMJ Group), SIREN 879 333 664, SIRET 879 333 664 00040 (le SIREN suffit, LCEN).
+- `public/.well-known/*` (deep-links iOS/Android) : n'y toucher qu'avec le fingerprint/appID exact fourni par Christopher (série d'incidents).
+- Sitemap = URLs FR uniquement + hreflang ; ne JAMAIS y remettre les `/en/` (retirées volontairement, commit 545d639). Canonical = `https://www.kreyolang.com` (www).
+- Images : mascotte `/mascot.webp` (jamais `mascot.png`, supprimé) ; favicon `/favicon.png`.
 
-### ✅ 2. Créer le fichier HTML statique (OBLIGATOIRE pour le SEO)
-- Créer `public/nom-de-la-route/index.html`
-- Ce fichier doit contenir le contenu réel de la page en HTML pur (sans JavaScript)
-- Il permet à Google et aux robots de crawler la page
-- Reprendre le style des fichiers existants : `public/conditions/index.html`, `public/support/index.html`
+## Skills projet (déclenchement automatique — les utiliser, toujours)
+- Créer ou modifier une page → `nouvelle-page` (triptyque JSX + HTML statique + sitemap, + volet EN).
 
-### ✅ 3. Mettre à jour le sitemap
-- Ajouter l'URL dans `public/sitemap.xml`
-- Format à respecter :
-```xml
-<url>
-  <loc>https://www.kreyolang.com/nom-de-la-route</loc>
-  <changefreq>monthly</changefreq>
-  <priority>0.5</priority>
-  <lastmod>YYYY-MM-DD</lastmod>
-</url>
-```
+## Pièges connus (incidents réels)
+- GitHub Pages renvoie 404 sur les routes profondes d'une SPA → toute page a son HTML statique dans `public/<route>/` (+ `public/404.html` en fallback).
+- Chantier UI déployé sans vérification visuelle = carrousel cassé en prod (89fe7c0) → build local + vérifier les pages touchées avant push.
+- Messages de commit descriptifs obligatoires (jamais « Mise à jour du site »).
 
-### ✅ 4. Commit et push sur GitHub
-- Toujours commit les 3 éléments ensemble (JSX + HTML statique + sitemap)
-
----
-
-## Pages existantes
-
-| Route | JSX | HTML statique | Dans sitemap |
-|---|---|---|---|
-| `/` | `src/pages/LandingPage.jsx` | ❌ (SPA) | ✅ |
-| `/conditions` | `src/pages/Conditions.jsx` | ✅ | ✅ |
-| `/confidentialite` | `src/pages/Confidentialite.jsx` | ✅ | ✅ |
-| `/mentions-legales` | `src/pages/MentionsLegales.jsx` | ✅ | ✅ |
-| `/delete-account` | `src/pages/DeleteAccount.jsx` | ✅ | ✅ |
-| `/support` | `src/pages/Support.jsx` | ✅ | ✅ |
-
----
-
-## Emails autorisés
-- ✅ `contact@kreyolang.com` (seule adresse réelle)
-- ❌ Ne jamais inventer d'autres adresses (privacy@, legal@, etc.)
-
-## Images
-- Mascotte navbar : `/mascot.webp` (WebP, 116KB)
-- Favicon : `/favicon.png` (PNG, 1536×1536)
-- Ne jamais référencer `mascot.png` (fichier supprimé)
-
-## Identité légale
-- Entreprise : Christopher Jeanne EI (CMJ Group)
-- SIREN : 879 333 664
-- SIRET : 879 333 664 00040
-- Le SIREN suffit pour les pages légales web (conforme LCEN)
-
-## ⚠️ Action en attente — À rappeler en début de session
-
-### Inscription CM2C (médiateur de la consommation) — OBLIGATOIRE légalement
-- Les CGU mentionnent CM2C comme médiateur (art. L616-1 Code de la consommation)
-- **Christopher doit s'inscrire ici : https://www.cm2c.net/inscription-professionnel.php**
-- Coût : ~48 € TTC pour 3 ans
-- Sans cette inscription, la clause est dans les CGU mais pas juridiquement opposable
-- Amende en cas de non-conformité : 3 000 € (EI)
-
----
-
-## Google Search Console
-- Propriété URL : `https://www.kreyolang.com` ✅ validée
-- Propriété Domaine : `kreyolang.com` ✅ validée
-- Sitemap soumis : `https://www.kreyolang.com/sitemap.xml`
-- Pour indexation rapide d'une nouvelle page : Search Console → inspecter l'URL → "Demander l'indexation"
+## Mémoire & apprentissage
+- Actions en attente et références (CM2C, Search Console) : `docs/TODO.md` — le lire en début de session.
+- Incident (déclencheurs du protocole global) → 1 ligne immédiate dans `docs/FAILURES.md`.
