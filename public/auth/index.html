@@ -87,6 +87,16 @@
         return;
       }
 
+      // type=recovery = lien "mot de passe oublié" (PAS une confirmation
+      // d'email normale) — texte adapté, sinon l'utilisateur croit avoir
+      // juste confirmé son email alors qu'il doit choisir un nouveau mot de
+      // passe dans l'app (bug réel signalé 30/07).
+      var type = hp.get('type') || qp.get('type');
+      if (type === 'recovery') {
+        document.getElementById('title').textContent = 'Lien v\u00e9rifi\u00e9 !';
+        document.getElementById('sub').textContent = 'Appuyez sur le bouton pour choisir votre nouveau mot de passe dans Kreyolang.';
+      }
+
       var btn = document.getElementById('btn');
       btn.href = deepLink;
       btn.addEventListener('click', function (e) {
