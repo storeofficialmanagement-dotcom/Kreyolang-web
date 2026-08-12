@@ -4,7 +4,7 @@ import LegalPage, { Article, SubTitle, Callout } from '../components/LegalPage';
 const Conditions = () => (
   <LegalPage
     title="Conditions Générales d'Utilisation et de Vente"
-    lastUpdated="Mai 2026"
+    lastUpdated="Août 2026"
   >
 
     {/* Préambule */}
@@ -215,6 +215,35 @@ const Conditions = () => (
           conditions générales
         </li>
       </ul>
+      <SubTitle>6.1 — Nature du contenu pédagogique et limitations de garanties</SubTitle>
+      <p>
+        CMJ Group s'engage à mettre en œuvre tous les moyens raisonnables pour garantir la qualité,
+        l'exactitude et la disponibilité du contenu proposé. La plateforme Kreyolang est fournie au
+        titre d'une <strong>obligation de moyens</strong> et non d'une obligation de résultat :
+        aucun niveau linguistique particulier n'est garanti à l'issue d'une période d'utilisation
+        déterminée.
+      </p>
+      <p>
+        Bien que nous apportions le plus grand soin à la rédaction, à la vérification et à la mise
+        à jour des leçons et des lexiques, CMJ Group ne garantit pas que les contenus soient exempts
+        de coquilles, d'omissions, d'erreurs typographiques ou d'inexactitudes linguistiques.
+      </p>
+      <p>
+        Les langues créoles étant vivantes et sujettes à des variations régionales, dialectales et
+        intergénérationnelles, les contenus proposés ne prétendent pas à l'exhaustivité ni à
+        l'universalité des expressions employées. La présence d'une forme régionale, d'une graphie
+        alternative ou d'une variante dialectale ne constitue pas un défaut de conformité au sens de
+        l'article <strong>L224-25-12</strong> du Code de la consommation.
+      </p>
+      <p>
+        L'utilisateur reconnaît et accepte que l'application est susceptible de faire l'objet
+        d'améliorations continues. Certains contenus (notamment les modules audio) et certaines
+        fonctionnalités visuelles peuvent être déployés de manière progressive ou être
+        temporairement indisponibles sans que cela ne constitue un défaut de conformité. Les
+        anomalies d'affichage ponctuelles (superpositions d'éléments, décalages visuels) font
+        l'objet d'une correction dans le cadre du processus normal de maintenance et ne donnent pas
+        droit à remboursement.
+      </p>
       <p className="mt-3">
         La responsabilité de CMJ Group, si elle venait à être engagée, ne saurait en tout
         état de cause excéder le montant total payé par l'utilisateur au cours des{' '}
