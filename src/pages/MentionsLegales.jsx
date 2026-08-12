@@ -2,7 +2,7 @@ import React from 'react';
 import LegalPage, { Article, Callout } from '../components/LegalPage';
 
 const MentionsLegales = () => (
-  <LegalPage title="Mentions Légales" lastUpdated="Avril 2026">
+  <LegalPage title="Mentions Légales" lastUpdated="Août 2026">
 
     <Callout color="indigo">
       Conformément aux dispositions de la loi n° 2004-575 du 21 juin 2004 pour la Confiance
@@ -51,23 +51,38 @@ const MentionsLegales = () => (
     </Article>
 
     {/* ─── Article 3 ─── */}
-    <Article title="Article 3 — Hébergement">
-      <div className="bg-white border border-slate-200 rounded-2xl p-5 space-y-1.5 text-sm">
-        <p>
-          <strong className="text-slate-800">Hébergeur du site web :</strong> GitHub Pages
-        </p>
-        <p>
-          <strong className="text-slate-800">Société :</strong> GitHub, Inc. (filiale de Microsoft Corporation)
-        </p>
-        <p>
-          <strong className="text-slate-800">Adresse :</strong> 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis
-        </p>
-        <p>
-          <strong className="text-slate-800">Site :</strong>{' '}
-          <a href="https://pages.github.com" className="text-purple-600 hover:underline" target="_blank" rel="noopener noreferrer">
-            pages.github.com
-          </a>
-        </p>
+    <Article title="Article 3 — Hébergement et infrastructure">
+      <div className="bg-white border border-slate-200 rounded-2xl p-5 space-y-3 text-sm">
+        <div className="space-y-1">
+          <p className="font-extrabold text-slate-700">Hébergeur du site vitrine (www.kreyolang.com)</p>
+          <p><strong className="text-slate-800">Prestataire :</strong> GitHub Pages — GitHub, Inc. (filiale de Microsoft Corporation)</p>
+          <p><strong className="text-slate-800">Adresse :</strong> 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis</p>
+          <p><strong className="text-slate-800">Site :</strong>{' '}
+            <a href="https://pages.github.com" className="text-purple-600 hover:underline" target="_blank" rel="noopener noreferrer">
+              pages.github.com
+            </a>
+          </p>
+        </div>
+        <div className="border-t border-slate-100 pt-3 space-y-1">
+          <p className="font-extrabold text-slate-700">Gestion du nom de domaine</p>
+          <p><strong className="text-slate-800">Prestataire :</strong> Infomaniak Network SA</p>
+          <p><strong className="text-slate-800">Adresse :</strong> Rue Eugène-Marziano 25, 1227 Les Acacias, Genève, Suisse</p>
+          <p><strong className="text-slate-800">Site :</strong>{' '}
+            <a href="https://www.infomaniak.com" className="text-purple-600 hover:underline" target="_blank" rel="noopener noreferrer">
+              www.infomaniak.com
+            </a>
+          </p>
+        </div>
+        <div className="border-t border-slate-100 pt-3 space-y-1">
+          <p className="font-extrabold text-slate-700">Hébergeur base de données et back-end applicatif</p>
+          <p><strong className="text-slate-800">Prestataire :</strong> Supabase, Inc.</p>
+          <p><strong className="text-slate-800">Adresse :</strong> 970 Toa Payoh North #07-04, Singapore 318992</p>
+          <p><strong className="text-slate-800">Site :</strong>{' '}
+            <a href="https://supabase.com" className="text-purple-600 hover:underline" target="_blank" rel="noopener noreferrer">
+              supabase.com
+            </a>
+          </p>
+        </div>
       </div>
     </Article>
 

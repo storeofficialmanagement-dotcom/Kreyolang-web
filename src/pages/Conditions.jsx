@@ -62,10 +62,10 @@ const Conditions = () => (
       <SubTitle>2.3 Compte Premium</SubTitle>
       <p>L'abonnement Premium débloque intégralement :</p>
       <ul className="list-disc list-inside space-y-1 ml-2 mt-1">
-        <li>Accès illimité à l'intégralité des leçons, unités et contenus</li>
+        <li>Accès illimité à l'ensemble des leçons, unités et contenus effectivement publiés et rendus accessibles sur la plateforme au moment de la consultation</li>
         <li>Expérience sans publicité</li>
-        <li>Téléchargement des leçons pour usage hors connexion</li>
-        <li>Accès prioritaire aux nouvelles unités et fonctionnalités</li>
+        <li>Téléchargement des leçons disponibles pour usage hors connexion</li>
+        <li>Accès prioritaire aux nouvelles fonctionnalités au fur et à mesure de leur déploiement</li>
         <li>Contenu exclusif : histoires créoles, défis spéciaux, audio haute qualité</li>
         <li>Synchronisation cloud illimitée entre tous les appareils</li>
       </ul>
@@ -209,7 +209,7 @@ const Conditions = () => (
           Des dommages indirects (perte de données, manque à gagner) résultant de l'utilisation
           ou de l'impossibilité d'utiliser le service
         </li>
-        <li>De la perte de progression consécutive à un dysfonctionnement technique imprévu</li>
+        <li>De la perte de progression, quelle qu'en soit la cause, notamment consécutive à un dysfonctionnement technique, une réinstallation de l'application, un changement d'appareil, une suppression de compte volontaire ou une désactivation de la synchronisation cloud</li>
         <li>
           Des transactions effectuées via Apple, Google ou Stripe, régies par leurs propres
           conditions générales
@@ -252,6 +252,31 @@ const Conditions = () => (
         anomalies d'affichage ponctuelles (superpositions d'éléments, décalages visuels) font
         l'objet d'une correction dans le cadre du processus normal de maintenance et ne donnent pas
         droit à remboursement.
+      </p>
+      <SubTitle>6.2 — Signalement et remède aux erreurs de contenu</SubTitle>
+      <p>
+        Les contenus pédagogiques sont conçus à partir de sources linguistiques de référence, avec
+        le concours d'outils algorithmiques et d'intelligences artificielles générant des
+        propositions de contenu, ainsi que de contributions humaines de vérification. L'utilisateur
+        reconnaît et accepte expressément que les technologies génératives peuvent produire des
+        inexactitudes et que ce mode de production est inhérent au service tel qu'il est proposé.
+      </p>
+      <p>
+        Malgré la rigueur apportée à leur vérification, des erreurs ponctuelles peuvent subsister.
+        En cas d'erreur constatée, l'utilisateur est invité à la signaler par écrit à{' '}
+        <a href="mailto:contact@kreyolang.com" className="text-purple-600 hover:underline font-semibold">
+          contact@kreyolang.com
+        </a>{' '}
+        en précisant la leçon concernée et l'élément contesté. CMJ Group étudiera le signalement
+        et pourra, à sa seule discrétion et selon sa feuille de route éditoriale, procéder à la
+        modification du contenu dans un délai raisonnable selon les contraintes techniques et
+        éditoriales en vigueur.
+      </p>
+      <p>
+        L'existence d'une inexactitude dans le contenu pédagogique, même avérée, n'ouvre droit à
+        aucun remboursement, avoir ou résiliation anticipée de l'abonnement. Le seul remède est
+        l'analyse et la correction éventuelle du contenu dans le cadre des mises à jour régulières
+        de la plateforme.
       </p>
       <p className="mt-3">
         La responsabilité de CMJ Group, si elle venait à être engagée, ne saurait en tout

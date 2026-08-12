@@ -35,7 +35,7 @@ const Table = ({ headers, rows }) => (
 );
 
 const Confidentialite = () => (
-  <LegalPage title="Politique de Confidentialité" lastUpdated="Mai 2026">
+  <LegalPage title="Politique de Confidentialité" lastUpdated="Août 2026">
 
     {/* Préambule */}
     <Callout color="indigo">
@@ -163,7 +163,7 @@ const Confidentialite = () => (
           ],
           [
             <strong className="text-slate-900">PostHog</strong>,
-            'Analytics comportementaux de progression (opt-in)',
+            'Analytics comportementaux de progression (soumis au consentement préalable)',
             'UE — EU Cloud, conforme RGPD, données anonymisées',
           ],
           [
@@ -177,9 +177,14 @@ const Confidentialite = () => (
             'UE — Hébergement EU, données minimisées (userId + email uniquement)',
           ],
           [
-            <strong className="text-slate-900">Expo</strong>,
-            'Envoi de notifications push (rappels d\'apprentissage)',
-            'USA — Seul le token push + contenu notification sont transmis',
+            <strong className="text-slate-900">Sign in with Apple</strong>,
+            'Authentification via identifiant Apple (option connexion)',
+            'USA — Framework Apple, données minimisées (email anonyme optionnel)',
+          ],
+          [
+            <strong className="text-slate-900">Expo / FCM / APNs</strong>,
+            'Envoi de notifications push (Expo utilise FCM de Google et APNs d\'Apple comme infrastructure de transport)',
+            'USA — Seuls le token push et le contenu de la notification sont transmis',
           ],
           [
             <strong className="text-slate-900">Resend</strong>,
