@@ -229,11 +229,20 @@ const Conditions = () => (
         de coquilles, d'omissions, d'erreurs typographiques ou d'inexactitudes linguistiques.
       </p>
       <p>
-        Les langues créoles étant vivantes et sujettes à des variations régionales, dialectales et
-        intergénérationnelles, les contenus proposés ne prétendent pas à l'exhaustivité ni à
-        l'universalité des expressions employées. La présence d'une forme régionale, d'une graphie
+        Les langues créoles et les langues africaines enseignées sur la plateforme étant des langues
+        vivantes, sujettes à des variations régionales, dialectales et intergénérationnelles, les
+        contenus proposés ne prétendent pas à l'exhaustivité ni à l'universalité des expressions,
+        du vocabulaire ou des graphies employées. La présence d'une forme régionale, d'une graphie
         alternative ou d'une variante dialectale ne constitue pas un défaut de conformité au sens de
         l'article <strong>L224-25-12</strong> du Code de la consommation.
+      </p>
+      <p>
+        De même, les structures grammaticales et syntaxiques présentées dans les leçons reflètent
+        un usage de référence, identifié par CMJ Group sur la base de travaux linguistiques
+        reconnus. La grammaire de ces langues pouvant varier selon les régions, les générations et
+        les contextes d'usage, la présentation d'une règle ou d'une construction syntaxique
+        particulière ne peut être contestée comme erreur ou défaut de conformité, sauf à démontrer
+        une contradiction manifeste avec les sources linguistiques de référence.
       </p>
       <p>
         L'utilisateur reconnaît et accepte que l'application est susceptible de faire l'objet
