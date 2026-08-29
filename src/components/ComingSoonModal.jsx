@@ -45,7 +45,7 @@ const ComingSoonModal = ({ onClose }) => {
 
         <div className="space-y-3">
           <a
-            href="https://apps.apple.com/us/app/kreyolang-apprends-ta-langue/id6760952977?l=fr-FR"
+            href="https://apps.apple.com/fr/app/kreyolang-apprends-ta-langue/id6760952977"
             target="_blank"
             rel="noopener noreferrer"
             className="w-full flex items-center gap-4 bg-slate-900 hover:bg-slate-700 text-white py-4 px-5 rounded-2xl border-b-4 border-slate-700 transition-colors"

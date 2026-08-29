@@ -106,7 +106,7 @@ const Footer = () => {
 
           <div className="flex gap-3 mt-6">
             <a
-              href="https://apps.apple.com/us/app/kreyolang-apprends-ta-langue/id6760952977?l=fr-FR"
+              href="https://apps.apple.com/fr/app/kreyolang-apprends-ta-langue/id6760952977"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 bg-slate-800 hover:bg-slate-700 rounded-lg px-3 py-2 transition-colors"
