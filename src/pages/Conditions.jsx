@@ -69,6 +69,32 @@ const Conditions = () => (
         <li>Contenu exclusif : histoires créoles, défis spéciaux, audio haute qualité</li>
         <li>Synchronisation cloud illimitée entre tous les appareils</li>
       </ul>
+
+      <SubTitle>2.4 — Diamants (monnaie virtuelle)</SubTitle>
+      <p>
+        Kreyolang propose l'achat de Diamants, monnaie virtuelle utilisable exclusivement au sein
+        de la plateforme, disponible sous forme de packs (500, 1 000 et 5 000 Diamants). L'achat
+        de Diamants confère une licence personnelle, non-exclusive, non-transférable et révocable
+        d'utilisation strictement limitée au Service.
+      </p>
+      <p>
+        Les Diamants n'ont aucune valeur monétaire réelle, ne sont ni remboursables ni échangeables
+        contre de l'argent, et ne peuvent être revendus, transférés ou cédés à un autre utilisateur
+        ou à un tiers.
+      </p>
+      <p>
+        CMJ Group se réserve le droit de modifier le prix, la composition des packs ou la
+        disponibilité des Diamants à tout moment. Les Diamants déjà acquis et non utilisés restent
+        utilisables selon les conditions en vigueur au moment de leur achat.
+      </p>
+      <p>
+        Les achats de Diamants suivent les mêmes règles de paiement et de remboursement que celles
+        définies à l'Article 3 des présentes CGU/CGV. Conformément à l'article{' '}
+        <strong>L221-28 13°</strong> du Code de la consommation, l'achat de Diamants entraîne une
+        exécution immédiate de la fourniture du contenu numérique ; l'utilisateur reconnaît
+        expressément renoncer à son droit de rétractation de 14 jours pour cet achat, dans les
+        mêmes conditions que celles prévues à l'Article 3.5 des présentes CGU/CGV.
+      </p>
     </Article>
 
     {/* ─── Article 3 ─── */}
@@ -132,7 +158,7 @@ const Conditions = () => (
         consommation).
       </p>
       <p className="mt-2">
-        Toutefois, conformément à l'article <strong>L221-28 12°</strong> du Code de la
+        Toutefois, conformément à l'article <strong>L221-28 13°</strong> du Code de la
         consommation, le droit de rétractation ne peut être exercé pour les contenus numériques
         non fournis sur un support matériel (accès Premium immédiat, leçons téléchargées hors
         connexion) dont l'exécution a commencé avec l'accord préalable exprès du consommateur et
@@ -167,10 +193,23 @@ const Conditions = () => (
         non-transférable</strong> d'utilisation de la plateforme, pour un usage strictement
         personnel et non commercial.
       </p>
+
+      <SubTitle>Contenus soumis par l'utilisateur</SubTitle>
+      <p>
+        Si l'utilisateur soumet, publie ou transmet un contenu via le Service (commentaires,
+        messages dans les espaces communautaires, ou tout autre contenu), il en conserve la
+        propriété mais concède à CMJ Group, pour la durée de protection des droits d'auteur
+        applicable, une licence gratuite, non-exclusive, mondiale et transférable, permettant
+        d'utiliser, reproduire, adapter et afficher ce contenu dans le cadre du fonctionnement,
+        de l'amélioration et de la promotion du Service. L'utilisateur garantit détenir tous les
+        droits nécessaires sur le contenu qu'il soumet et s'engage à ne pas soumettre de contenu
+        portant atteinte aux droits d'un tiers.
+      </p>
     </Article>
 
     {/* ─── Article 5 ─── */}
     <Article title="Article 5 — Règles d'utilisation">
+      <SubTitle>5.1 — Comportements interdits</SubTitle>
       <p>L'utilisateur s'engage expressément à ne pas :</p>
       <ul className="list-disc list-inside space-y-1.5 ml-2 mt-1">
         <li>Créer plusieurs comptes pour contourner les limitations du compte gratuit</li>
@@ -193,6 +232,31 @@ const Conditions = () => (
         <strong>suspension temporaire ou la résiliation définitive</strong> du compte de
         l'utilisateur concerné.
       </p>
+
+      <SubTitle>5.2 — Résiliation pour motif légitime</SubTitle>
+      <p>
+        Indépendamment des cas de violation mentionnés ci-dessus, CMJ Group peut suspendre ou
+        résilier l'accès d'un utilisateur pour un motif légitime et sérieux, notamment en cas de
+        comportement suspect, de risque avéré pour la sécurité de la plateforme ou des autres
+        utilisateurs, ou de fraude suspectée, moyennant notification par email lorsque cela est
+        possible. Si cette résiliation résulte d'une violation avérée des présentes CGU/CGV par
+        l'utilisateur, aucun remboursement n'est dû au titre de l'abonnement Premium ou des
+        Diamants non utilisés. Dans les autres cas, CMJ Group procède au remboursement au prorata
+        de la période d'abonnement restante ou de la contre-valeur des Diamants non consommés.
+      </p>
+
+      <SubTitle>5.3 — Garantie et indemnisation</SubTitle>
+      <p>
+        En cas d'utilisation du Service par l'utilisateur en violation manifeste des présentes
+        CGU/CGV ou des{' '}
+        <a href="/regles-communaute" className="text-purple-600 hover:underline font-semibold">
+          Règles de la Communauté
+        </a>{' '}
+        (notamment fraude, usage illicite, atteinte aux droits d'un tiers), l'utilisateur s'engage
+        à indemniser CMJ Group du préjudice directement causé par cette violation. Cette garantie
+        ne s'applique pas aux réclamations résultant d'une faute de CMJ Group, ni aux droits
+        d'ordre public dont bénéficie l'utilisateur en sa qualité de consommateur.
+      </p>
     </Article>
 
     {/* ─── Article 6 ─── */}
@@ -201,6 +265,15 @@ const Conditions = () => (
         Kreyolang s'efforce de maintenir la plateforme disponible 24h/24, 7j/7, mais ne peut
         garantir une disponibilité ininterrompue, notamment en cas de maintenance planifiée, de
         mise à jour système, ou d'événement de force majeure.
+      </p>
+      <p>
+        Sans préjudice de la garantie légale de conformité applicable aux contenus et services
+        numériques (art. <strong>L224-25-12</strong> et suivants du Code de la consommation),
+        CMJ Group ne garantit pas une disponibilité ininterrompue du Service, l'absence totale
+        d'erreurs ou de bugs, ni la compatibilité avec l'ensemble des appareils, versions de
+        systèmes d'exploitation ou configurations existantes. L'utilisateur reconnaît que des
+        interruptions ponctuelles ou anomalies techniques mineures peuvent survenir sans que cela
+        ne remette en cause la conformité générale du Service.
       </p>
       <p>La société ne pourra être tenue responsable :</p>
       <ul className="list-disc list-inside space-y-1 ml-2 mt-1">
@@ -278,6 +351,14 @@ const Conditions = () => (
         l'analyse et la correction éventuelle du contenu dans le cadre des mises à jour régulières
         de la plateforme.
       </p>
+      <SubTitle>6.3 — Liens vers des sites tiers</SubTitle>
+      <p>
+        Le Service peut contenir des liens vers des sites ou services tiers (stores d'application,
+        réseaux sociaux, médiateur de la consommation). CMJ Group n'exerce aucun contrôle sur ces
+        sites tiers et ne saurait être tenu responsable de leur contenu, de leurs pratiques, ou de
+        tout dommage résultant de leur utilisation.
+      </p>
+
       <p className="mt-3">
         La responsabilité de CMJ Group, si elle venait à être engagée, ne saurait en tout
         état de cause excéder le montant total payé par l'utilisateur au cours des{' '}
