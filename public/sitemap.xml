@@ -37,6 +37,13 @@
   </url>
 
   <url>
+    <loc>https://www.kreyolang.com/regles-communaute/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+    <lastmod>2026-08-29</lastmod>
+  </url>
+
+  <url>
     <loc>https://www.kreyolang.com/delete-account/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>

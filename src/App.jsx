@@ -4,6 +4,7 @@ import LandingPage from './pages/LandingPage';
 import Conditions from './pages/Conditions';
 import Confidentialite from './pages/Confidentialite';
 import MentionsLegales from './pages/MentionsLegales';
+import ReglesCommunaute from './pages/ReglesCommunaute';
 import DeleteAccount from './pages/DeleteAccount';
 import Support from './pages/Support';
 import { LanguageProvider } from './context/LanguageContext';
@@ -17,6 +18,7 @@ const App = () => (
       <Route path="/conditions" element={<Conditions />} />
       <Route path="/confidentialite" element={<Confidentialite />} />
       <Route path="/mentions-legales" element={<MentionsLegales />} />
+      <Route path="/regles-communaute" element={<ReglesCommunaute />} />
       <Route path="/delete-account" element={<DeleteAccount />} />
       <Route path="/support" element={<Support />} />
     </Routes>

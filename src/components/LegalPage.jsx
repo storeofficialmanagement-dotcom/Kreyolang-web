@@ -93,6 +93,7 @@ const LegalPage = ({ title, lastUpdated, badge = 'Document légal', children }) 
           <Link to="/conditions"      className="hover:text-purple-600 transition-colors">CGU / CGV</Link>
           <Link to="/confidentialite" className="hover:text-purple-600 transition-colors">Confidentialité</Link>
           <Link to="/mentions-legales" className="hover:text-purple-600 transition-colors">Mentions légales</Link>
+          <Link to="/regles-communaute" className="hover:text-purple-600 transition-colors">Communauté</Link>
           <Link to="/delete-account"  className="hover:text-purple-600 transition-colors">Supprimer mon compte</Link>
           <Link to="/support"         className="hover:text-purple-600 transition-colors">Support</Link>
           <a href="mailto:contact@kreyolang.com" className="hover:text-purple-600 transition-colors">
