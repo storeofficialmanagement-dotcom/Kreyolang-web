@@ -17,6 +17,7 @@ const txtFR = {
   conditions: "Conditions d'utilisation",
   privacy: 'Politique de confidentialité',
   mentions: 'Mentions légales',
+  community: 'Règles de la communauté',
   follow: 'Suivez-nous',
   copyright: '© 2026 Kreyolang.com. Tous droits réservés.',
 };
@@ -34,6 +35,7 @@ const txtEN = {
   conditions: 'Terms of use',
   privacy: 'Privacy policy',
   mentions: 'Legal notices',
+  community: 'Community Guidelines',
   follow: 'Follow us',
   copyright: '© 2026 Kreyolang.com. All rights reserved.',
 };
@@ -68,6 +70,7 @@ const Footer = () => {
             <li><Link to="/conditions" className="hover:text-amber-400 transition-colors">{t.conditions}</Link></li>
             <li><Link to="/confidentialite" className="hover:text-amber-400 transition-colors">{t.privacy}</Link></li>
             <li><Link to="/mentions-legales" className="hover:text-amber-400 transition-colors">{t.mentions}</Link></li>
+            <li><Link to="/regles-communaute" className="hover:text-amber-400 transition-colors">{t.community}</Link></li>
             <li><Link to="/delete-account" className="hover:text-amber-400 transition-colors">Supprimer mon compte</Link></li>
             <li><Link to="/support" className="hover:text-amber-400 transition-colors">Support</Link></li>
           </ul>
