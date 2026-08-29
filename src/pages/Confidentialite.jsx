@@ -107,6 +107,16 @@ const Confidentialite = () => (
         propres serveurs. Nous conservons uniquement la confirmation du statut d'abonnement
         (actif / inactif / type d'offre) via RevenueCat.
       </p>
+
+      <SubTitle>2.5 Informations visibles par les autres utilisateurs</SubTitle>
+      <p>
+        Dans le cadre des classements par ligue et des espaces communautaires, les informations
+        suivantes sont visibles par les autres utilisateurs consultant votre profil ou le
+        classement : votre pseudonyme, les langues que vous apprenez, votre total de points
+        d'expérience (XP), le nombre de mots appris, votre rang dans la ligue, et votre statut
+        Premium le cas échéant. Aucune autre donnée personnelle (adresse email, âge, coordonnées)
+        n'est visible par les autres utilisateurs.
+      </p>
     </Article>
 
     {/* ─── Article 3 ─── */}
@@ -293,30 +303,57 @@ const Confidentialite = () => (
     </Article>
 
     {/* ─── Article 7 ─── */}
-    <Article title="Article 7 — Cookies et traceurs">
-      <SubTitle>7.1 Cookies strictement nécessaires</SubTitle>
+    <Article title="Article 7 — Utilisateurs mineurs">
+      <p>
+        Les utilisateurs âgés de moins de 15 ans utilisent Kreyolang sous la responsabilité et
+        avec le consentement préalable d'un parent ou tuteur légal (voir Art. 2.1 des CGU/CGV).
+        Afin de renforcer la protection de ces utilisateurs :
+      </p>
+      <ul className="list-disc list-inside space-y-1 ml-2 mt-1">
+        <li>
+          Seul un pseudonyme est utilisé et affiché dans les classements et les espaces
+          communautaires — aucun nom réel n'est requis ni rendu visible aux autres utilisateurs.
+        </li>
+        <li>
+          Le parent ou tuteur légal peut à tout moment demander l'accès, la rectification ou la
+          suppression des données de son enfant en écrivant à{' '}
+          <a href="mailto:contact@kreyolang.com" className="text-purple-600 hover:underline">
+            contact@kreyolang.com
+          </a>
+          , sur simple justification du lien de filiation.
+        </li>
+        <li>
+          Aucune donnée sensible (géolocalisation précise, données biométriques) n'est collectée
+          auprès des utilisateurs mineurs.
+        </li>
+      </ul>
+    </Article>
+
+    {/* ─── Article 8 ─── */}
+    <Article title="Article 8 — Cookies et traceurs">
+      <SubTitle>8.1 Cookies strictement nécessaires</SubTitle>
       <p>
         Ces cookies permettent l'authentification sécurisée (tokens JWT via Supabase) et la
         mémorisation de vos préférences. Ils sont indispensables au fonctionnement du service et{' '}
         <strong>ne nécessitent pas votre consentement</strong>.
       </p>
 
-      <SubTitle>7.2 Cookies analytiques (opt-in)</SubTitle>
+      <SubTitle>8.2 Cookies analytiques (opt-in)</SubTitle>
       <p>
         Utilisés via <strong>PostHog EU Cloud</strong> pour analyser l'usage agrégé et améliorer
         l'expérience pédagogique. Ces cookies requièrent votre consentement préalable via le
         bandeau dédié. Ils peuvent être refusés sans impact sur l'utilisation du service.
       </p>
 
-      <SubTitle>7.3 Absence de cookies publicitaires</SubTitle>
+      <SubTitle>8.3 Absence de cookies publicitaires</SubTitle>
       <p>
         Kreyolang <strong>n'utilise aucun cookie publicitaire tiers</strong>. Aucune donnée de
         navigation n'est partagée avec des réseaux publicitaires.
       </p>
     </Article>
 
-    {/* ─── Article 8 ─── */}
-    <Article title="Article 8 — Modifications de la politique">
+    {/* ─── Article 9 ─── */}
+    <Article title="Article 9 — Modifications de la politique">
       <p>
         Nous nous réservons le droit de modifier la présente politique pour l'adapter aux
         évolutions légales, réglementaires ou fonctionnelles de notre service.
