@@ -34,7 +34,7 @@ export const Callout = ({ color = 'amber', children }) => {
 };
 
 // ─── Layout principal des pages légales ────────────────
-const LegalPage = ({ title, lastUpdated, badge = 'Document légal', children }) => (
+const LegalPage = ({ title, lastUpdated, applicableFrom = '1ᵉʳ mars 2026', badge = 'Document légal', children }) => (
   <div className="min-h-screen bg-white font-sans text-slate-800">
 
     {/* ── Header sticky ── */}
@@ -75,7 +75,7 @@ const LegalPage = ({ title, lastUpdated, badge = 'Document légal', children }) 
           <strong className="text-slate-700">{lastUpdated}</strong>
         </p>
         <p className="text-sm text-slate-500 mt-0.5">
-          Applicable à partir du 1ᵉʳ mars 2026
+          Applicable à partir du {applicableFrom}
         </p>
       </div>
 
