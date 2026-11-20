@@ -38,12 +38,6 @@ const Confidentialite = () => (
   <LegalPage title="Politique de Confidentialité" lastUpdated="20 novembre 2026" applicableFrom="20 novembre 2026">
 
     {/* Version du 20/11/2026 — texte source unique : public/confidentialite/index.html (même contenu) */}
-    <Callout color="indigo">
-      <strong>Nouvelle version</strong>, applicable à partir du 20 novembre 2026. Elle remplace la{' '}
-      <a href="/confidentialite/2026-08/" className="text-purple-600 hover:underline">version d'août 2026</a>.
-      Principale nouveauté : la possibilité, facultative, de recevoir nos nouveautés et
-      offres (article 5), uniquement si vous l'acceptez.
-    </Callout>
 
     <p className="text-slate-600 leading-relaxed text-[15px]">Cette politique explique quelles données personnelles Kreyolang utilise, pourquoi, combien de temps, avec qui elles sont partagées, et comment exercer vos droits. Elle applique le Règlement général sur la protection des données (RGPD, règlement UE 2016/679), la loi n° 78-17 du 6 janvier 1978 « Informatique et Libertés » et l'article L34-5 du Code des postes et des communications électroniques.</p>
 
