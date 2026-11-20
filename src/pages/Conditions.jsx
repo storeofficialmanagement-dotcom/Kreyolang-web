@@ -4,7 +4,7 @@ import LegalPage, { Article, SubTitle, Callout } from '../components/LegalPage';
 const Conditions = () => (
   <LegalPage
     title="Conditions Générales d'Utilisation et de Vente"
-    lastUpdated="Août 2026"
+    lastUpdated="Novembre 2026"
   >
 
     {/* Préambule */}
@@ -94,6 +94,11 @@ const Conditions = () => (
         exécution immédiate de la fourniture du contenu numérique ; l'utilisateur reconnaît
         expressément renoncer à son droit de rétractation de 14 jours pour cet achat, dans les
         mêmes conditions que celles prévues à l'Article 3.5 des présentes CGU/CGV.
+      </p>
+
+      <SubTitle>2.5 — Stories</SubTitle>
+      <p>
+        Kreyolang publie dans l'application de courts contenus appelés « stories » : actualités du service, contenus culturels, liens vers nos réseaux sociaux et présentation des offres de Kreyolang, dont l'abonnement Premium. Les stories sont accessibles à tous les utilisateurs, gratuits comme Premium, et ne s'ouvrent que si l'utilisateur choisit de les consulter : elles ne s'imposent jamais pendant l'apprentissage. La promesse « expérience sans publicité » de l'abonnement Premium (article 2.3) concerne la publicité affichée pendant l'utilisation ; elle n'empêche pas l'accès aux stories. Les stories sont publiées uniquement par CMJ Group ; les utilisateurs ne peuvent pas en publier. Les liens d'une story peuvent mener vers des sites tiers (article 6.3). Vos mentions « j'aime » sont enregistrées dans votre compte (voir la Politique de confidentialité).
       </p>
     </Article>
 
