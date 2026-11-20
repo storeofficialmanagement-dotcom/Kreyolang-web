@@ -35,14 +35,13 @@ const Table = ({ headers, rows }) => (
 );
 
 const Confidentialite = () => (
-  <LegalPage title="Politique de Confidentialité" lastUpdated="18 novembre 2026" applicableFrom="18 décembre 2026">
+  <LegalPage title="Politique de Confidentialité" lastUpdated="20 novembre 2026" applicableFrom="20 novembre 2026">
 
-    {/* Version du 18/11/2026 — texte source unique : public/confidentialite/index.html (même contenu) */}
+    {/* Version du 20/11/2026 — texte source unique : public/confidentialite/index.html (même contenu) */}
     <Callout color="indigo">
-      <strong>Nouvelle version</strong>, publiée le 18 novembre 2026 et applicable à partir du 18 décembre 2026.
-      Jusqu'à cette date, la{' '}
-      <a href="/confidentialite/2026-08/" className="text-purple-600 hover:underline">version d'août 2026</a>{' '}
-      reste applicable. Principale nouveauté : la possibilité, facultative, de recevoir nos nouveautés et
+      <strong>Nouvelle version</strong>, applicable à partir du 20 novembre 2026. Elle remplace la{' '}
+      <a href="/confidentialite/2026-08/" className="text-purple-600 hover:underline">version d'août 2026</a>.
+      Principale nouveauté : la possibilité, facultative, de recevoir nos nouveautés et
       offres (article 5), uniquement si vous l'acceptez.
     </Callout>
 
